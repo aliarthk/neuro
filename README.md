@@ -1,7 +1,7 @@
 Kleine Anleitung für Github unter Linux/MacOs:
 
 Um Git aufzusetzen:
-1. Ordner DBS (oder so) in eurem lokalen Filesystem anlegen
+1. Ordner in eurem lokalen Filesystem anlegen
 2. In Kommandozeile diesen Ordner öffnen und dann:
    * `git init`
    * `git remote add origin https://github.com/aliarthk/neuro.git`
