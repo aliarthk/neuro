@@ -200,7 +200,7 @@ Aufzeichnung der Spannungsdifferenz der Elektroden mit Software Spike2 bei folge
 \end{enumerate}
 
 \section{Ergebnisse}
-
+\subsection{"{}Kick"{} (Tibiastreckung)}
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{kick4.png}}
 \caption{EMG der Tibiastreckung}
@@ -217,6 +217,7 @@ Frequenz: 4.58 (s. Abb. 1)
 Dauer: 0.018/2= 0.009\\
 Amplitude: 0.0128 (s. Abb. 2)
 
+\subsection{"{}Thrusting"{}-Bewegung}
 (Elektroden leider vertauscht weil rausgerutscht)
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{thrust3.png}}
@@ -235,6 +236,16 @@ Dauer: 0.0208\\
 Amplitude: 0.305 (s. Abb. 4)
 
 \section{Diskussion}
+Zunächst ist für die Interpretation der gemessenen Spannungen zu betrachten, dass es sich hier um eine differentielle Ableitung im extrazellulären Bereich handelt. Das heißt es wird nicht nur die Spannung an einer Stelle betrachtet, sondern die Differenz der Spannungen zwischen den beiden Einstichen der Messelektroden im Oberschenkel der Heuschrecke. Diese Messmethode hat außerdem den Vorteil, dass Störsignale von elektromagnetischen Wechselfeldern der Umgebung eliminiert werden können, da sie sich in der Regel sehr schnell ausbreiten und somit nahezu gleichzeitig an beiden Messpunkten ankommen. Bei der Berechnung der Differenz beider Signale addieren sich die Werte der Störsignale also wie folgt aus:
+\begin{center}
+$U_{ges}= (U_1+S_1) - (U_2 + S_2)$ \\
+
+Unter der Annahme, dass $S_1 \approx S_2$, gilt: \\
+
+$U_{ges} \approx U_1 - U_2$
+\end{center}
+
+
 Tafelbild.\\
 Wichtig: Messen Spannungsdifferenz zwischen den Elektroden nicht direkt AP's\\
 Thrusting durch Widerstand Dauerbelastung\\
