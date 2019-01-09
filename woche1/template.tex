@@ -127,7 +127,7 @@
 			\textit{TutorInnen}\\
 			\textsc{Lisa}\\
 			\textsc{Johannes}\\
-			\textsc{Claudia ??}
+			\textsc{Claudia}
 		\end{flushleft}
 	\end{minipage}
 	~
@@ -164,15 +164,10 @@
 
 %----------------------------------------------------------------------------------------
 \section{Einleitung}
-Notizen: \\
--differentielle extrazelluläre Ableitung 
--AD Wandler
--evtl. Heuschrecke mit Beschrfitung der Hinterbeine \\
--Welche Rückschlüsse von EMG und warum\\
--Muskelpotential, Aktionspotential\\
--Multiple Innervierung von muskelfasern durch motoneuronen bei Wirbellosen (wichtig für erklärung später)\\
--Langsame vs Schnelle Motoneurone
--Frequenz AP's
+In dem durchgeführten Versuch wurden die elektrischen Signale im Oberschenkelmuskels einer Heuschrecke bei unterschiedlichen Bewegungsmustern aufgezeichnet und ausgewertet.\\
+Die Kontraktionen der Muskeln resultiert aus Aktivität von Motoneuronen, die zusammen mit den von ihnen innervierten Muskelfasern motorische Einheiten bilden. Bei Wirbellosen können Muskelfasern von mehreren Muskelneuronen innerviert sein. Wird ein entsprechender Neurotransmitter freigesetzt kommt es in der Muskelzelle zur Depolarisation, die bei genügend großer Amplitude ein Aktionspotential auslöst. Bei Wirbellosen Tieren gibt es zwei Arten von Motoneuronen, die bei Aktivierung zu unterschiedlichen Arten von Kontraktionen des Muskels führen. Bei schnellen Motoneuronen löst ein Aktionspotential eine Zuckung aus, die jedoch nicht das volle Kontraktionspotential auschöpfen kann. Bei langsamen Motoneuronen müssen sich erst mehrerer Aktionspotentiale häufen bis es zu einer Kontraktion kommt. Hier ist die Stärke der Kontraktion, bzw deren Amplitude abhängig von der Frequenz der Aktionspotentiale.\\
+Ein Elektromyogramm (EMG) ist eine Ableitung dieser elektrischen Muskelaktivitäten. Aufgezeichnet werden die Signale durch extrazelluläre Elektroden. Um diese sichtbar und somit analysierbar zu machen müssen die analog aufgezeichneten Signale mittels eines Verstärkers verstärkt , durch einen Bandpassfilter von Störfrequenzen befreit und mithilfe eines AD-Wandlers in digitale Signale umgewandelt werden.\\
+Gemessen wird immer eine Spannungsdifferenz, passiert dies lokal und nicht gegen ein allgemeines Bezugspotential, so handelt es sich um eine differentielle Ableitung.
 
 \section{Material und Methoden}
 
@@ -180,21 +175,32 @@ Notizen: \\
 \begin{itemize}
 \item Verstärker mit Bandpassfilter
 \item AD Wandler
-\item Software Spike2
 \item Erdungsplatte
 \item Hakenelektroden
-\item Bananenkabel mit Krokodilsklemme
+\item Bananenkabel mit Krokodilsklemmen
+\item Software Spike2
 \item Heuschrecke als Versuchstier 
 \item Knetmasse
 \item Pinsel
 \end{itemize}
 \subsection{Versuchsaufbau}
-Skizze
+\includegraphics[width=1\textwidth]{skizze}
+%\begin{figure}[H]
+%\makebox[\textwidth][c]{\includegraphics[width=1\textwidth]{geraete}}
+%\caption{Aufbau und Verkabelung der Geräte}
+%\label{geraete}
+%\end{figure}
+%\begin{figure}[H]
+%\makebox[\textwidth][c]{\includegraphics[width=1\textwidth]{heuschrecke}}
+%\caption{Präparierte der Heuschrecke}
+%\label{heuschrecke}
+%\end{figure}
 
 \subsection{Versuchsdurchführung}
 \begin{enumerate}
-\item \textbf{Präparation der Heuschrecke:}\\ Das Versuchstier wird 10 Minuten in den Kühlschrank gestellt. Die Heuschrecke wird auf dem Rücken liegend so fixiert, dass die Oberschenkel der Hinterbeine unbeweglich, die Unterschenkel jedoch frei beweglich sind. Anschließend werden die zwei Elektroden in geringem Abstand in den Oberschenkelmuskel gestochen. 
-\item \textbf{Aufzeichnung der BEwegungsmuster:}\\
+\item \textbf{Anschließen der Geräte:}\\ Der Verstärker wird auf die Erdungsplatte gestellt und die Elektroden angeschlossen. Der AD-Wandler wird mithilfe des Bananenkabels mit den Krokodilklemmen an der Erdungsplatte geerdet und mit dem Laptop verbunden. Nach Start der Software Spike2 und laden der Konfigurationsdatei "{}insect"{} wird der Verstärker mit dem angegebenen Port des AD-Wandlers gekoppelt.
+\item \textbf{Präparation der Heuschrecke:}\\ Das Versuchstier wird 10 Minuten in den Kühlschrank gestellt. Die Heuschrecke wird auf dem Rücken liegend so fixiert, dass die Oberschenkel der Hinterbeine unbeweglich, die Unterschenkel jedoch frei beweglich sind. Anschließend werden die beiden Elektroden in geringem Abstand in den Oberschenkelmuskel gestochen. 
+\item \textbf{Aufzeichnung der Bewegungsmuster:}\\
 Aufzeichnung der Spannungsdifferenz der Elektroden mit Software Spike2 bei folgenden Vorgängen.
 \begin{enumerate}
 \item \textbf{Kick:} Das Versuchstier wird so lange am Bauch mit dem Pinsel gereizt bis es zur Tibiastreckung kommt. 
@@ -292,4 +298,5 @@ Dies ist eine typische Eigenschaft der wirbellosen Tiere: im Gegensatz zu Wirbel
 %Amplitudenunterschied auch an Position der Elektroden und wegen extrazellulär
 
 \end{document}
+
 
