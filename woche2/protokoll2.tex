@@ -4,8 +4,11 @@
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{cite}
 \usepackage{pdfpages}
+\usepackage[german]{varioref}
 \usepackage{mathpazo} % Palatino font
 \usepackage[german]{babel}
 \parindent0pt
@@ -104,16 +107,53 @@ Ziel der heutigen Experimente ist es, die Erregunsleitung und Funktionsweise der
 
 \subsection{Erregunsleitung in Nervenzellen}
 Die Fortleitung von Informationen wird von Zellen des Nervensystem übernommen und basiert auf Spannungsunterschieden zwischen dessen Zellinnerem und dem extrazellulären Raum. \\
-Aufgrund der Semipermeabilität der Membran von Neuronen, liegt ein sogenanntes Ruhepotential von ca. -70mV vor. Die Membran ist für größere Ionen wie Natrium nicht permeabel , aber Kalium kann frei diffundieren. Durch die geringere Konzentration von Kalium-Ionen im Zellinneren, kommt es zu einem Kalium-Austrom d.h. einem Austrom von Kationen, sodass das Nervenzelle gegenüber der Außenseite negativ geladen ist.  
+Aufgrund der Semipermeabilität der Membran von Neuronen, liegt ein sogenanntes Ruhepotential von ca. -70mV vor. Die Membran ist für größere Ionen wie Natrium ($Na^{2+}$) nicht permeabel , aber Kalium ($K^{+}$) kann frei diffundieren. Durch die geringere Konzentration von Kalium-Ionen im Zellinneren, kommt es zu einem Kalium-Austrom d.h. einem Austrom von Kationen, sodass das Nervenzelle gegenüber der Außenseite negativ geladen ist. Außerdem trägt eine Natrium-Kalium-Pumpe ($Na^{2+}$-$K^+$-ATPase) zum Erhalt des Membranpotentials bei.  \\
+Eine Nervenzelle wird durch die Bindung eines Neurotransmitters an einen ligandengesteuerten Ionenkanal in der Plasmamembran aktiviert. Dieser Kanal öffnet sich durch die Bindung, woraufhin $Na^{2+}$ und $Ca^{2+}$ entlang des Konzentrationsgradienten in die Zelle einströmen und eine Depolarisation bewirken. Spannungsabhängige $Na^{2+}$-Kanäle entlang des Axons einer Nervenzelle, die durch die Depolarisation in benachbarten Regionen der Zelle kurz geöffnet werden, sorgen für die Ausbreitung des Aktionspotentials in Form einer Depolarisationswelle durch das Neuron. Kurz nach der Depolarisation durch Natrium-Einstrom öffnen sich auch spannungsgesteurte $K^+$-Kanäle entlang des Axons, die wiederum eine Repolarisation durch den Austrom von Kalium bewirken. Da diese Kalium-Kanäle etwas langsamer schließen, kommt es zu einer Hyperpolarisation der Zelle. Anschließend wird das Ruhepotential durch Leckströme von Ionen und die Aktivität der Natrium-Kalium-Pumpe wiederhergestellt.  \cite{lehninger}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.85\textwidth]{aktionspotential}}
+\caption{Die Abbildung zeigt den zeitlichen Verlauf eines Aktionspotentials einer Nervenzelle. Zu sehen ist die Depolarisation von -70mV auf ca. +20mV, danach die Repolarisation übergehend zur Hyperpolarisation zu ca. 100mV und die Wiederherstellung des Ruhepotentials.  }
+\label{ap}
+\end{figure}
 
+Die passiven elektrischen Eigenschaften der Nervenzelle beeinflussen hierbei die Geschwindigkeit, mit der sich ein Aktionspotential ausbreitet. Dies ist zum einen der Membranwiderstand $R_m$, zum anderen die Membrankapazität $C_m$ und außerdem der intrazelluläre Längswiderstand $R_i$. Außerdem wirkt sich der Durchmesser eines Neurons auf die Fortleitungsgeschwindigkeit aus.  \cite{haustiere} 
+
+\subsection{Refraktärphase}
+Nachdem die Natrium-Kanäle während der Depolarisation kurz geöffnet waren, sind die für eine bestimmte Zeit inaktiviert. Diese Phase nennt man Refraktärphase, währenddessen können diese Natrium-Kanäle nicht aktiviert werden und ein weiteres Aktionspotential auslösen. Dadurch wird erreicht, dass sie die Depolarisationswelle, d.h. das Aktionspotential nur in eine Richtung entlang des Axons ausbreitet.  \cite{zellbiologie} \\
+Man unterscheidet zwischen der absoluten und relativen Refraktärphase. Während der absoluten Refraktärphase ist eine Erregung überhaupt nicht möglich, auch nicht durch eine starke Depolarisation. \\
+Die relative Refraktärphase beginnt direkt nach der absoluten Refraktärphase. Hier ist eine erneute Erregung zwar möglich, aber das Schwellenpotential ist deutlich höher. Das heißt, um erneut ein Aktionspotential auszulösen ist ein stärkerer Reiz nötig. Außerdem ist während dieser Zeit die Amplitude des resultierenden Aktionspotentiales verringert. \cite{physiologie}
 
 \subsection{Riesenaxone}
+Die Entwicklung von Axonen mit deutlich größerem Durchmesser ist durch den evolutionären Vorteil entstanden, dass diese Aktionspotentiale schneller fortleiten können. Besonders für Bewegungsabläufe, die bei Fluchtreaktionen von Bedeutung sind, ist diese Eigenschaft entscheidend. \\
+Bei der Vergrößerung des Durchmessers von Nervenfasern kommt es zu einem geringeren cytoplasmatischen Längswiderstand $R_i$, der wiederum für einen Anstieg der Längskonstante verantwortlich ist. Der Längswiderstand lässt sich wie folgt berechnen:
+\begin{equation}
+\label{eq1}
+R_i = \dfrac{R_m}{\pi d^2}
+\end{equation}
+Daraus folgt, dass bei gleichem Membranwiderstand $R_m$ die Längskonstante $R_i$ für einen steigenden Durchmesser sinkt. Ursache dafür ist, dass durch den größeren Durchmesser der Widerstand, der sich in der Zelle dem Stromfluss (einströmenden Ionen) entgegenstellt, geringer ist. \\
+Die Längskonstante $\lambda$ ist die Strecke, in der die maximale Amplitude der Spannungsänderung durch die Depolarisation auf den Anteil $\frac{1}{e} \approx 37\%$ abgefallen ist.  \cite{physiologie} Sie berechnet sich folgendermaßen:
+\begin{equation}
+\label{eq2}
+\lambda = \dfrac{d/2 \cdot R_m}{2 R_i} = \dfrac{d \cdot R_m}{4 R_i}
+\end{equation}
+Demnach kann das Aktionspotential eine größere Distanz überbrücken, bis es seine Amplitude verliert, wenn der Durchmesser des Axons größer ist. \\
+Diese Eigenschaften führten zu der Bildung von Riesenfasern, die man heute noch bei Arten der Bilateria finden kann. 
 
 \subsection{Myelinisierung}
+Um den Längswiderstand $L_i$ zu erhöhen, kann auch der Membranwiderstand $R_m$ bei gleichbleibendem Durchmesser $d$ vergrößert werden (\vref*{eq1}). \\
+Dies wird bei der Myelinisierung über eine saltatorische Erregungsleitung erreicht, bei der im Gegensatz zu nichtmyelinisierten Axonen die aktiven und passiven Leitungsmechanismen zeitlich und räumlich voneinander getrennt sind. \\
+Gliazellen umhüllen Axone und bilden die Myelinscheide, indem sie sich um die Nervenfaser wickeln. Dadurch wird das Axon isoliert und es liegt ein größerer Membranwiderstand vor, sodass der Längswiderstand verringert wird und schließlich eine Erhöhung der Längskonstante bewirkt wird (\vref*{eq2}). \\
+Die myelinisierten Nervenfasern weisen sogenannte Ranvier-Schnürringe auf, an denen die aktiven Leitungsprozesse (langsamere Erregunsleitung) ablaufen , während die passiven in den isolierten Abschnitten (schnelle Erregungsleitung) erfolgen. An diesen Schnürringen liegt das Axon unmyelinisiert vor, diese kurzen Abschnitte dienen zur Regeneration der Amplitude des Aktionspotentials. \cite{physiologie}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.85\textwidth]{myelin}}
+\caption{Dies ist eine schematische Darstellung einer myeliniserten Nervenfaser. Gezeigt ist, wie ein Aktionspotential von einem zum nächsten Schnürring \glqq springt\grqq{}. }
+\label{myelin}
+\end{figure}
+
 
 \subsection{Anatomie des Lumbricus terrestris}
 
-\subsection{Refraktärphase}
+
 
 \section{Material und Methoden}
 
@@ -137,8 +177,13 @@ Durch verschiedene Störfaktoren enthalten unsere Messungen leider viele Artefak
 \section{Diskussion}
 
 \begin{thebibliography}{999}
-\bibitem {Quelle1} Autor etc.
-\bibitem {Quelle2} Autor etc.
+\bibitem {lehninger} Nelson, David; Cox, Michael: Lehninger Biochemie. Springer Verlag, 2011.
+\bibitem {zellbiologie} Karp, Gerald: Molekulare Zellbiologie. Springer Verlag, 2005.
+\bibitem {haustiere} von Engelhardt, Wolfgang: Physiologie der Haustiere. Georg Thieme Verlag, 2010. 
+\bibitem {physiologie} Schmidt, Robert; Lang, Florian; Heckmann, Manfred: Physiologie des Menschen, mit Pathopyhsiologie. Springer Medizin Verlag, 2010. 
+
+\bibitem [Abbildung 1]{Abb1} \url{https://www.repetico.de/card-16616620}, \\Zugriff 17.01.2019 13:20 Uhr
+\bibitem [Abbildung 2]{Abb2} Karp, Gerald: Molekulare Zellbiologie. Springer Verlag, 2005.
 \end{thebibliography}
 
 
