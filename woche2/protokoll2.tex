@@ -154,12 +154,11 @@ Die myelinisierten Nervenfasern weisen sogenannte Ranvier-Schnürringe auf, an d
 \subsection{Anatomie des Lumbricus terrestris}
 Der gemeine Regenwurm (auch: Tauwurm) \textit{Lumbricus terrestris} besitzt einen länglichen bräunlich rot gefärbten Körper, der in mehrere Segmente unterteilt ist. Zur Fortbewegung befinden sich an jedem dieser Segmente zwei Borstenpaare an der Unterseite. Das vordere Ende weist eine dunklere eher braune Färbung auf und läuft spitz zu, während das hintere Ende eher heller gefärbt ist. Der Körper des Regenwurms besteht aus einer flüssigkeitsgefüllten sekundären Leibeshöhle oder \textit{Coelom} \citation{koerperbau}, die von einem formgebenden Hautmuskelschlauch umgeben ist. In der Leibeshöhle befinden sich auch die Organe des Regenwurms, sprich der Darm, die Gonaden, die Nephriden, das Ringgefäß mit Rücken- sowie Bauchgefäß und das für diesen Versuch relevante Bauchmark \ref{bauchmark}. 
 \begin{figure}[H]
-\makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{bauchmark-laengs}\hspace*{4mm}\includegraphics[width=0.35\textwidth]{bauchmark-quer}}
-\makebox[\textwidth][c]{}
+\makebox[\textwidth][c]{\includegraphics[width=0.7\textwidth]{bauchmark-laengs}\hspace*{4mm}\includegraphics[width=0.35\textwidth]{bauchmark-quer}}%\makebox[\textwidth][c]{}
 \caption{Eine Skizze der Anatomie des Regenwurms. Links im Längs-, rechts im Querschnitt. Das Bauchmark ist gelb hervorgehoben}
 \label{bauchmark}
 \end{figure}
-Im Bauchmark befinden sich die Riesenfasern des Regenwurms, die mediane Riesenfaser (im Folgenden als MRF bezeichnet) und die lateralen Riesenfasern (im Folgenden als LRF bezeichnet). Zusätzlich zu dem vergrößerten Durchmesser der in ihnen liegenden Neuronen sind die Riesenfasern myelinisiert. Die beiden LRF mit je einem Durchmesser von ca. $50 \mu m$, der zu anterior abnimmt, sind über Querbrücken verbunden und fungieren so wie eine einzelne Nervenfaser. Die MRF hat einen Durchmesser von ca. $75 \mu m$, der Richtung posterior abnimmt. Sie erfüllen unterschiedliche Funktionen, und sprechen so unterschiedliche sensorische und motorische Neuronen an. Die MRF sorgt bei Reizen am anterioren Pol für das Abflachen des posterioren Körperendes und somit für ein Zurückziehen des anterioren Körperendes. Die LRF sorgen bei einem Reiz am posterioren Ende, dafür dass sich der Wurm am anterioren Ende "{}festhält"{} und das posteriore Ende wegzieht.\ref{skript}
+Im Bauchmark befinden sich die Riesenfasern des Regenwurms, die mediane Riesenfaser (im Folgenden als MRF bezeichnet) und die lateralen Riesenfasern (im Folgenden als LRF bezeichnet). Zusätzlich zu dem vergrößerten Durchmesser der in ihnen liegenden Neuronen sind die Riesenfasern myelinisiert. Die beiden LRF mit je einem Durchmesser von ca. $50 \mu m$, der zu anterior abnimmt, sind über Querbrücken verbunden und fungieren so wie eine einzelne Nervenfaser. Die MRF hat einen Durchmesser von ca. $75 \mu m$, der Richtung posterior abnimmt. Sie erfüllen unterschiedliche Funktionen, und sprechen so unterschiedliche sensorische und motorische Neuronen an. Die MRF sorgt bei Reizen am anterioren Pol für das Abflachen des posterioren Körperendes und somit für ein Zurückziehen des anterioren Körperendes. Die LRF sorgen bei einem Reiz am posterioren Ende, dafür dass sich der Wurm am anterioren Ende "{}festhält"{} und das posteriore Ende wegzieht.\cite{skript}
 
 \subsection{Differentielle Ableitung}
 Eine differentielle Ableitung ist eine Methode zur Ableitung elektrischer Muskelpotentiale, bei der eine lokale Differenz zwischen zwei Elektroden gemessen wird. Dies dient dem herausfiltern von Störsignalen der elektromagnetischen Wechselfeldern der Umwelt. Es wird angenommen, dass sich diese Störsignale ca. mit Lichtgeschwindigkeit ausbreiten und somit beide Elektroden zur gleichen Zeit erreichen. Berechnet man nun die Differenz der von den Elektroden jeweils gemessenen Spannungen, so ergibt sich folgende Gleichung:
@@ -176,17 +175,22 @@ $U_{ges} \approx U_1 - U_2$
 
 \section{Material und Methoden}
 \subsection{Material}
-Für den durchgeführten Versuch wurde ein Regenwurm der Art Lumbruczs terrestis als Versuchstier verwendet. Zudem eine Wurmplatte mit einer Vertiefung für das Versuchstier, sowie 2 Paaren von fest verankerten Elektroden, ein Reizgenerator, ein Verstärker, ein AD-Wandler und ein Laptop. Für die Erhebung der Daten wurde die Software Spike2 benutzt.
+Für den durchgeführten Versuch wurde ein Regenwurm der Art Lumbricus terrestris als Versuchstier verwendet. Zudem eine Wurmplatte mit einer Vertiefung für das Versuchstier, sowie 2 Paaren von fest verankerten Elektroden, ein Reizgenerator, ein Verstärker, ein AD-Wandler und ein Laptop. Für die Erhebung der Daten wurde die Software Spike2 benutzt.
 \subsection{Versuchsaufbau}
 Für den Versuch wurde zuerst der Regenwurm unter fließendem Wasser abgewaschen und anschließend abgetrocknet.\\
-Für Teil 2-4 des Versuchs wurde die Vertiefung der Wurmplatte auf einer Seite mit Knete blockiert und das Versuchstier animiert in diese hineinzukriechen. Sobald der Regenwurm sich vollständig zusammengezogen mit dem vorderen Ende an der Knete und dem Körper über dem vorderen Elektronenpaar befindet, wird die Vertiefung auch hinten mit Knete blockiert und der Wurm zusätzlich mir Plexiglasplatten fixiert.\\
-An die Elektroden am anterioren Ende (im Folgenden "{}anteriore Elektroden"{} genannt) des Versuchstiers wird der Reizgenerator angeschlossen und die Elektroden am posterioren Ende (im Folgenden "{}posteriore Elektroden"{} genannt) werden mit dem Verstärker verknüpft. Sowohl der Reizgenerator als auch der Verstärker werden über den AD-Wandler an den PC angeschlossen \ref{schema}
-
+Für Teil 2-4 des Versuchs wurde die Vertiefung der Wurmplatte auf einer Seite mit Knete blockiert und das Versuchstier animiert in diese hineinzukriechen. Sobald der Regenwurm sich vollständig zusammengezogen hat und mit dem vorderen Ende an der Knete und dem Körper über dem vorderen Elektronenpaar gelegt hat, wurde die Vertiefung auch hinten mit Knete blockiert und der Wurm zusätzlich mit Plexiglasplatten fixiert.\ref{foto} \\
+An die Elektroden am anterioren Ende (im Folgenden "{}anteriore Elektroden"{} genannt) des Versuchstiers wurde der Reizgenerator angeschlossen und die Elektroden am posterioren Ende (im Folgenden "{}posteriore Elektroden"{} genannt) wurden mit dem Verstärker verknüpft. Sowohl der Reizgenerator als auch der Verstärker wurden über den AD-Wandler an den PC angeschlossen \ref{schema}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.8\textwidth]{IMG_6360}}
+\caption{Das Bild zeigt, wie der Regenwurm in der Wurmplatte mit Knete und den Plexiglasplatten fixiert wurde. Außerdem sieht man die Verkabelung der Elektroden am posterioren Ende des Wurmes. }
+\label{foto}
+\end{figure}
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{schema}}
 \caption{Die Abbildung zeigt einen schematischen Versuchsaufbau für den 1. - 3. Versuch. Gezeigt sind die verwendeten Komponenten und entlang der Pfeile ist der Informationsfluss zu erkennen. In blauer Schrift sind die Funktionen gekennzeichnet. }
 \label{schema}
 \end{figure}
+
 
 \subsection{Versuchsdurchführung}
 
@@ -195,11 +199,30 @@ In diesem ersten Teil des Versuchs wurde der Regenwurm auf ein feuchtes Filterpa
 Anschließend wurde mit einem stumpfen Gegenstand mal das anteriore und mal das posteriere Ende gereizt um die jeweiligen Ausweich-, bzw. Meidereaktionen beobachten zu können. 
 
 \subsubsection{Identifikation der Riesenfaser bei mechanischer Reizung}
-Das Versuchstier wird in der Wurmplatte fixiert (s. Versuchsaufbau) und ebenfalls mit einem stumpfen Gegenstand je fünf mal am anterioren und posterioren Ende gereizt. Der Moment des Reizes wurde mit einem Keyboardmarker in Spike2 festgehalten. Zwischen zwei Reizen wurden dem Regenwurm je mindestens 30 Sekunden Ruhe gewährt.
+Das Versuchstier wurde in der Wurmplatte fixiert (s. Versuchsaufbau) und ebenfalls mit einem stumpfen Gegenstand je fünf mal am anterioren und posterioren Ende gereizt. Dieses Mal wurde dabei eine differentielle Ableitung mit den Elektroden in der Wurmplatte durchgeführt und aufgezeichnet. Der Moment des Reizes wurde mit einem Keyboardmarker in Spike2 festgehalten. Zwischen zwei Reizen wurden dem Regenwurm je mindestens 30 Sekunden Ruhe gewährt.
 
 \subsubsection{Bestimmung der Reizschwelle und der Fortleitungsgeschwindigkeit von MRF und LRF durch elektrische Reizung}
+In diesem Versuchsteil wurde zusätzlich der Reizgenerator an die Wurmplatte angeschlossen, sodass eine elektrische Reizung des Wurm möglich war (siehe \ref{schema}). Die Reizelektroden wurden dafür am anterioren Ende des Wurmes angeschlossen. \\
+Mit einer Reizdauern von $0.15$ms wurde der Wurm beginnend mit $0.5$V elektrisch gereizt.  Die Spannungsstärke wurde dann in Schritten von $0.5$V inkrementiert, bis zu einer maximalen Reizstärke von $10V$. \\
+Die Reizstärke und der Zeitpunkt der Reizung wurden mittels Keyboardmarkern in Spike2 entsprechend markiert. \\
+Der Zeitpunkt an dem zuerst ein Aktionspotential beobachtet werden konnte wurde protokolliert. \\
+
+
+
+\textbf{Anmerkung}\\
+Den folgenden Versuchsteile konnten wir am Versuchstag auf Grund von Zeitmangel durch Komplikationen bei den Messungen eider nicht mehr durchführen. Deshalb werden diese Experimente nur theoretisch beschrieben, fallen im Ergebnisteil weg und werden in der Diskussion auch theoretisch erörtert. 
+
+
+
+
+
 
 \subsubsection{Bestimmung der Refraktärphasen bei elektrischer Reizung}
+Hier hätte der gleiche Versuchsaufbau wie in 2.3.3 verwendet werden sollen. Der Wurm hätte mittels des Reizgenerators elektrisch gereizt werden sollen und gleichzeitig wäre eine differentielle Ableitung über die Elektroden erfolgt. \\
+Diesmal wäre aber die Reizstärke konstant geblieben, während man dagegen aber eine Reizung mit der Einstellung \glqq Twin Pulse\grqq{} durchgeführt hätte, d.h. zwei kurz aufeinanderfolgende Reize. \\
+Beginnend mit einem Delay (Abstand zwischen den beiden Reizen) von $20$ms hätte man den Regenwurm elektrisch gereizt. Diesen zeitlichen Abstand hätte man schrittweise dekrementiert, bis man nur noch ein einziges Aktionspotential beobachtet hätte. \\
+Anschließend hätte man bei gleichbleibendem Delay die Reizstärke wieder schrittweise inkrementiert, bis man wieder ein zweites Aktionspotential beobachtet hätte. Zuletzt hätte man erneut den Delay bei gleichbleibender Reizstärke dekrementiert, bis wieder nur ein Aktionspotential zu beobachten gewesen wäre. 
+
 
 \section{Ergebnisse}
 Durch verschiedene Störfaktoren enthalten unsere Messungen leider viele Artefakte und sind zum Teil unvollständig.  \\
