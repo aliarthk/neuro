@@ -196,7 +196,7 @@ An die Elektroden am anterioren Ende (im Folgenden "{}anteriore Elektroden"{} ge
 
 \subsubsection{Beobachtung der Lokomotion}
 In diesem ersten Teil des Versuchs wurde der Regenwurm auf ein feuchtes Filterpapier gelegt und seine natürlichen Bewegungen beobachtet.\\
-Anschließend wurde mit einem stumpfen Gegenstand mal das anteriore und mal das posteriere Ende gereizt um die jeweiligen Ausweich-, bzw. Meidereaktionen beobachten zu können. 
+Anschließend wurde mit einem stumpfen Gegenstand mal das anteriore und mal das posteriere Ende gereizt um die jeweiligen Ausweich- bzw. Meidereaktionen beobachten zu können. 
 
 \subsubsection{Identifikation der Riesenfaser bei mechanischer Reizung}
 Das Versuchstier wurde in der Wurmplatte fixiert (s. Versuchsaufbau) und ebenfalls mit einem stumpfen Gegenstand je fünf mal am anterioren und posterioren Ende gereizt. Dieses Mal wurde dabei eine differentielle Ableitung mit den Elektroden in der Wurmplatte durchgeführt und aufgezeichnet. Der Moment des Reizes wurde mit einem Keyboardmarker in Spike2 festgehalten. Zwischen zwei Reizen wurden dem Regenwurm je mindestens 30 Sekunden Ruhe gewährt.
@@ -208,12 +208,8 @@ Die Reizstärke und der Zeitpunkt der Reizung wurden mittels Keyboardmarkern in 
 Der Zeitpunkt an dem zuerst ein Aktionspotential beobachtet werden konnte wurde protokolliert. \\
 
 
-
 \textbf{Anmerkung}\\
 Den folgenden Versuchsteile konnten wir am Versuchstag auf Grund von Zeitmangel durch Komplikationen bei den Messungen eider nicht mehr durchführen. Deshalb werden diese Experimente nur theoretisch beschrieben, fallen im Ergebnisteil weg und werden in der Diskussion auch theoretisch erörtert. 
-
-
-
 
 
 
@@ -226,15 +222,75 @@ Anschließend hätte man bei gleichbleibendem Delay die Reizstärke wieder schri
 
 \section{Ergebnisse}
 Durch verschiedene Störfaktoren enthalten unsere Messungen leider viele Artefakte und sind zum Teil unvollständig.  \\
+\subsection{Beobachtung der Lokomotion}
+Wir konnten beobachten, dass sich der Wurm zur Fortbewegung zuerst nach vorne ausstreckte und anschließend den hinteren Teil des Körpers nach- und sich so zusammenzog. Hierbei entfernten sich die Segmente bei der Streckung voneinander, um beim Zusammenziehen wieder ineinander zu gleiten.\\
+Leider zeigte das Versuchstier nur sehr schwache Meidereaktionen bei Reizung des posterioren oder anterioren Körperendes. Trotzdem konnte man schwach erkennen, dass der Regenwurm bei anteriorer Reizung den Körper zusammenzog und so das Körperende vom Reiz wegbewegte. Bei posteriorer Reizung ließ sich keine eindeutige Vermutung auf Meidreaktion erkennen. 
 
-Screenshots für 2. : \\
-$a4_1, a4_2, a6_1$ \\
-$p3_3, p3_4, p4_2 $\\
+\subsection{Identifikation der Riesenfaser bei mechanischer Reizung}
+Wir wählten eine hundertfache Verstärkung der gemessenen Spannungen.\\
+Aufgrund der vielen Artefakte und trotz mehrerer Messungen an drei verschiedenen Versuchstieren, konnten wir in den Messungen lediglich jeweils drei Aktionspotentiale eines Versuchstieres identifizieren und somit auswerten. 
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe2/a6_1.png}}
+\caption{Ableitung eines extrazellulär abgeleitetem Aktionspotential nach anteriorer Reizung: In der Abbildung ist in Grün der Verlauf einer extrazellulären differentiellen Ableitung zu sehen.  Die Amplitude des identifizierten Aktionspotential beträgt $0,350-(-0,07)=0,42 mV$ und die Dauer $1,521/2 \approx 0,761 ms$ }
+\label{ant}
+\end{figure}
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe2/p4_2.png}}
+\caption{Ableitung eines extrazellulär abgeleitetem Aktionspotential nach posteriorer Reizung: In der Abbildung ist in Grün der Verlauf einer extrazellulären differentiellen Ableitung zu sehen.  Die Amplitude des identifizierten Aktionspotential beträgt $0,0413-(-0,0036)=0,45 mV$ und die Dauer $2,432/2 \approx 1,216 ms$ }
+\label{post}
+\end{figure}
+
+In \ref{ant} ist beispielhaft ein die Ableitung eines Aktionspotentials nach anteriorer Reizung zu sehen. Es ist klar zu erkennen, dass die Kurve erst steigt und dann fällt. Handelt es sich um eine posteriore Reizung \ref{post} so Fällt die Kurve zuerst und steigt danach.
+
+\begin{table}[H]
+\caption{In der untenstehenden Tabelle sind Amplitude (in mV) und Dauer (in ms) der identifizierten Aktionspotentiale nach anteriorer bzw. posteriorer Reizung dargestellt, sowie der jeweils berechnete Durchschnitt und die Standardabweichung.}
+\begin{center}
+\begin{tabular}{l||c|c}
+Art & Amplitude in mV & Dauer in ms \\
+\hline\hline
+Anteriorer Reiz & 0,031 & 0,817\\
+Anteriorer Reiz & 0,036 & 0,659\\
+Anteriorer Reiz & 0,042 & 0,761\\
+\hline
+Durchschnitt & 0,0363& 0,7457\\
+Standardabweichung & 0,00449 &0,0654 \\
+\hline\hline
+Posteriorer Reiz & 0,032 & 1,206\\
+Posteriorer Reiz & 0,026& 1,202\\
+Posteriorer Reiz & 0,045 & 1,216\\
+\hline
+Durchschnitt & 0,0343 & 1,208\\
+Standardabweichung & 0,00793& 0,00589
+\end{tabular}
+\end{center}
+\label{werte}
+\end{table}
+
+In \ref{werte} sind die gemessenen Werte der jeweils 3 Aktionspotentiale dargestellt, sowie die Berechnungen der Dauer und der Standardabweichung. Für die Berechnung der Dauer haben wir wie in \ref{ant} und \ref{post} zu sehen die Marker auf Anfang und Ende der S-Kurve und den resultierenden Wert durch zwei geteilt, um ein genaueres Ergebnis zu erhalten.\\
+Allgemein lässt sich erkennen, dass die Größe der Amplituden bei anterioren und posterioren Reizen nahezu identisch ist, der Durchschnitt weist lediglich einen Unterschied von $0,002 mV$ auf. Die Dauer allerdings ist bei den posterioren Reizen im Durchschnitt um $0,4623 ms$ länger.  
+
+
+\subsection{Bestimmung der Reizschwelle und der Fortleitungsgeschwindigkeit von MRF und LRF durch elektrische Reizung}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe3/g1_2.png}}
+\caption{In dieser Abbildung ist ein Aktionspotential nach posteriorer Reizung zu erkennen.}
+\label{g1-2}
+\end{figure}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe3/g2.png}}
+\caption{In dieser Abbildung ist ein Aktionspotential nach posteriorer Reizung zu erkennen.}
+\label{g2}
+\end{figure}
+
+\subsection{Bestimmung der Refraktärphasen bei elektrischer Reizung}
 
 Screenshots für 3. : \\
 $g1_2, g2$ \\
 
 \section{Diskussion}
+Keine klare Meidereaktion evtl weil Wurm "{}müde"{} da am Vormittag schon verwendet für versuche oä
 
 \begin{thebibliography}{999}
 \bibitem {lehninger} Nelson, David; Cox, Michael: Lehninger Biochemie. Springer Verlag, 2011.
