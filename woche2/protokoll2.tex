@@ -170,16 +170,27 @@ Unter der Annahme, dass $S_1 \approx S_2$, gilt: \\
 $U_{ges} \approx U_1 - U_2$
 \end{center}
 
-
-
+Diese Differenzberechnung der von den Elektroden gemessenen Spannungen führt allerdings auch zu einer doppelten Darstellen von Aktionspotentialen.
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.9\textwidth]{diff.png}}
+\caption{Skizze Elektroden und Ausbreitung des Aktionspotenzials}
+\label{diff}
+\end{figure}
+So ist in Abbildung \ref{diff} skizzenhaft die Ausbreitung eines Aktionspotenzials in Form der Ringe a) - c) gezeigt mit Messelektroden an den Stellen $1$ und $2$. Folgende Berechnungen zeigen die Berechnung der Spannungsunterschiede zwischen $1$ und $2$ an den jeweiligen Punkten a)-c) (s. Abb. \ref{diff}):
+\begin{align*}
+a)\,\, U_{ges} &= -60\mu V - 0\mu V =  -60\mu V\\
+b)\,\, U_{ges} &= 0\mu V - 0\mu V =  0\mu V\\
+c)\,\, U_{ges} &= 0\mu V - -60\mu V =  60\mu V\\
+\end{align*}
+Das Elektromyogramm zeigt so zwei Ausschläge pro Aktionspotential, einen positiven und einen negativen. 
 
 \section{Material und Methoden}
 \subsection{Material}
 Für den durchgeführten Versuch wurde ein Regenwurm der Art Lumbricus terrestris als Versuchstier verwendet. Zudem eine Wurmplatte mit einer Vertiefung für das Versuchstier, sowie 2 Paare von fest verankerten Elektroden, ein Reizgenerator, ein Verstärker, ein AD-Wandler und ein Laptop. Für die Erhebung der Daten wurde die Software Spike2 benutzt.
 \subsection{Versuchsaufbau}
 Für den Versuch wurde zuerst der Regenwurm unter fließendem Wasser abgewaschen und anschließend abgetrocknet.\\
-Für Teil 2-4 des Versuchs wurde die Vertiefung der Wurmplatte auf einer Seite mit Knete blockiert und das Versuchstier animiert in diese hineinzukriechen. Sobald der Regenwurm sich vollständig zusammengezogen hat und mit dem vorderen Ende an der Knete und dem Körper über dem vorderen Elektronenpaar gelegen hat, wurde die Vertiefung auch hinten mit Knete blockiert und der Wurm zusätzlich mit Plexiglasplatten fixiert.\ref{foto} \\
-An die Elektroden am anterioren Ende (im Folgenden "{}anteriore Elektroden"{} genannt) des Versuchstiers wurde der Reizgenerator angeschlossen und die Elektroden am posterioren Ende (im Folgenden "{}posteriore Elektroden"{} genannt) wurden mit dem Verstärker verknüpft. Sowohl der Reizgenerator als auch der Verstärker wurden über den AD-Wandler an den PC angeschlossen \ref{schema}
+Für Teil 2-4 des Versuchs wurde die Vertiefung der Wurmplatte auf einer Seite mit Knete blockiert und das Versuchstier animiert in diese hineinzukriechen. Sobald der Regenwurm sich vollständig zusammengezogen hat und mit dem vorderen Ende an der Knete und dem Körper über dem vorderen Elektronenpaar gelegen hat, wurde die Vertiefung auch hinten mit Knete blockiert und der Wurm zusätzlich mit Plexiglasplatten fixiert (Abb. \ref{foto}). \\
+An die Elektroden am anterioren Ende (im Folgenden "{}anteriore Elektroden"{} genannt) des Versuchstiers wurde der Reizgenerator angeschlossen und die Elektroden am posterioren Ende (im Folgenden "{}posteriore Elektroden"{} genannt) wurden mit dem Verstärker verknüpft. Sowohl der Reizgenerator als auch der Verstärker wurden über den AD-Wandler an den PC angeschlossen (Abb. \ref{schema}).
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=0.8\textwidth]{IMG_6360}}
 \caption{Das Bild zeigt, wie der Regenwurm in der Wurmplatte mit Knete und den Plexiglasplatten fixiert wurde. Außerdem sieht man die Verkabelung der Elektroden am posterioren Ende des Wurmes. }
@@ -202,7 +213,7 @@ Anschließend wurde mit einem stumpfen Gegenstand mal das anteriore und mal das 
 Das Versuchstier wurde in der Wurmplatte fixiert (s. Versuchsaufbau) und ebenfalls mit einem stumpfen Gegenstand je fünf mal am anterioren und posterioren Ende gereizt. Dieses Mal wurde dabei eine differentielle Ableitung mit den Elektroden in der Wurmplatte durchgeführt und aufgezeichnet. Der Moment des Reizes wurde mit einem Keyboardmarker in Spike2 festgehalten. Zwischen zwei Reizen wurden dem Regenwurm je mindestens 30 Sekunden Ruhe gewährt.
 
 \subsubsection{Bestimmung der Reizschwelle und der Fortleitungsgeschwindigkeit von MRF und LRF durch elektrische Reizung}
-In diesem Versuchsteil wurde zusätzlich der Reizgenerator an die Wurmplatte angeschlossen, sodass eine elektrische Reizung des Wurm möglich war (siehe \ref{schema}). Die Reizelektroden wurden dafür am anterioren Ende des Wurmes angeschlossen. \\
+In diesem Versuchsteil wurde zusätzlich der Reizgenerator an die Wurmplatte angeschlossen, sodass eine elektrische Reizung des Wurm möglich war (siehe Abb. \ref{schema}). Die Reizelektroden wurden dafür am anterioren Ende des Wurmes angeschlossen. \\
 Mit einer Reizdauern von $0.15$ms wurde der Wurm beginnend mit $0.5$V elektrisch gereizt.  Die Spannungsstärke wurde dann in Schritten von $0.5$V inkrementiert, bis zu einer maximalen Reizstärke von $10V$. \\
 Die Reizstärke und der Zeitpunkt der Reizung wurden mittels Keyboardmarkern in Spike2 entsprechend markiert. \\
 Der Zeitpunkt an dem zuerst ein Aktionspotential beobachtet werden konnte wurde protokolliert. \\
@@ -244,7 +255,7 @@ Aufgrund der vielen Artefakte und trotz mehrerer Messungen an drei verschiedenen
 \label{post}
 \end{figure}
 
-In \ref{ant} ist beispielhaft die Ableitung eines Aktionspotentials nach anteriorer Reizung zu sehen. Es ist klar zu erkennen, dass die Kurve erst steigt und dann fällt. Handelt es sich um eine posteriore Reizung \ref{post} so fällt die Kurve zuerst und steigt danach.
+In Abbildung \ref{ant} ist beispielhaft die Ableitung eines Aktionspotentials nach anteriorer Reizung zu sehen. Es ist klar zu erkennen, dass die Kurve erst steigt und dann fällt. Handelt es sich um eine posteriore Reizung (s. Abb. \ref{post}) so fällt die Kurve zuerst und steigt danach.
 
 \begin{table}[H]
 \caption{In der untenstehenden Tabelle sind Amplitude (in mV) und Dauer (in ms) der identifizierten Aktionspotentiale nach anteriorer bzw. posteriorer Reizung dargestellt, sowie der jeweils berechnete Durchschnitt und die Standardabweichung.}
@@ -270,61 +281,71 @@ Standardabweichung & 0,00793& 0,00589
 \label{werte}
 \end{table}
 
-In \ref{werte} sind die gemessenen Werte der jeweils 3 Aktionspotentiale dargestellt, sowie die Berechnungen der Dauer und der Standardabweichung. Für die Berechnung der Dauer haben wir wie in \ref{ant} und \ref{post} zu sehen die Marker auf Anfang und Ende der S-Kurve und den resultierenden Wert durch zwei geteilt, um ein genaueres Ergebnis zu erhalten.\\
-Allgemein lässt sich erkennen, dass die Größe der Amplituden bei anterioren und posterioren Reizen nahezu identisch ist, der Durchschnitt weist lediglich einen Unterschied von $0,002 mV$ auf. Die Dauer allerdings ist bei den posterioren Reizen im Durchschnitt um $0,4623 ms$ länger.  
+In Tabelle \ref{werte} sind die gemessenen Werte der jeweils 3 Aktionspotentiale dargestellt, sowie die Berechnungen der Dauer und der Standardabweichung. Für die Berechnung der Dauer haben wir wie in Abb. \ref{ant} und Abb. \ref{post} zu sehen die Marker auf Anfang und Ende der S-Kurve und den resultierenden Wert durch zwei geteilt, um ein genaueres Ergebnis zu erhalten.\\
+Allgemein lässt sich erkennen, dass die Größe der Amplituden bei anterioren und posterioren Reizen nahezu identisch ist, der Durchschnitt weist lediglich einen Unterschied von $0,002 mV$ auf. Die Dauer allerdings ist bei den posterioren Reizen im Durchschnitt um $0,4623 ms$ länger.
 
 
 \subsection{Bestimmung der Reizschwelle und der Fortleitungsgeschwindigkeit von MRF und LRF durch elektrische Reizung}
-\begin{figure}[H]
-\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe3/g1_2.png}}
-\caption{In dieser Abbildung ist ein Aktionspotential nach posteriorer Reizung zu erkennen.}
-\label{g1-2}
-\end{figure}
+Die ersten Aktionspotentiale konnten bei einer Reizstärke von 3,5 V erkannt werden. Leider war es uns aufgrund der vielen Artefakte nicht möglich zu erkennen bei welcher Reizung zwei Aktionspotentiale auftreten. Die Ergebnisse sind demnach unvollständig. 
+
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe3/g2.png}}
-\caption{In dieser Abbildung ist ein Aktionspotential nach posteriorer Reizung zu erkennen.}
+\caption{Ableitung eines extrazellulär abgeleitetem Aktionspotential nach elektrischer Reizung: In der Abbildung ist in Grün der Verlauf einer extrazellulären differentiellen Ableitung zu sehen.  Die Amplitude des identifizierten Aktionspotential beträgt $0,158 mV$ und die Dauer $0,1/2 \approx 0,05 s$. Anm.: In der Abbildung sind die y-Achsen gespiegelt.}
 \label{g2}
 \end{figure}
 
-\subsection{Bestimmung der Refraktärphasen bei elektrischer Reizung}
+Wie in Abbildung \ref{g2} zu erkennen enthält auch diese Ableitung viele Störungen und Schwankungen, was die Identifikation der Aktionspotentiale erschwerte. Die in Tabelle \ref{werte2} dargestellten und ausgewerteten Werte stammen von dem in Abbildung \ref{g2} abgebildeten sowie einem weiteren Aktionspotential, das identifiziert werden konnte.
 
-Screenshots für 3. : \\
-$g1_2, g2$ \\
+\begin{table}[H]
+\caption{In der untenstehenden Tabelle sind Amplitude (in mV), Dauer und Latenzzeit (jeweils in s) der zwei identifizierten Aktionspotentiale nach elektronischer Reizung mit Reizstärke 3,5V dargestellt, sowie der jeweils berechnete Durchschnitt und die Standardabweichung.}
+\begin{center}
+\begin{tabular}{l||c|c|c}
+Art & Amplitude in mV & Dauer in s & Latenzzeit in s\\
+\hline\hline
+ Reiz 1& 0,168 & 0,0298 & 0,134\\
+Reiz 2& 0,158 & 0,05 & 0,114\\
+\hline
+Durchschnitt & 0,163 & 0,0399 & 0,124\\
+Standardabweichung & 0,0035 &0,00714 & 0,0071
+\end{tabular}
+\end{center}
+\label{werte2}
+\end{table}
+
+%\begin{figure}[H]
+%\makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{aufgabe3/g2.png}}
+%\caption{Ableitung eines extrazellulär abgeleitetem Aktionspotential nach elektrischer Reizung: In der Abbildung ist in Grün der Verlauf einer extrazellulären differentiellen Ableitung zu sehen.  Die Amplitude des identifizierten Aktionspotential beträgt $0,168 mV$ und die Dauer $0,0595 s$}
+%\label{g2}
+%\end{figure}
+
+\subsection{Bestimmung der Refraktärphasen bei elektrischer Reizung}
+Diesen Versuch konnten wir aufgrund von Zeitmangel nicht durchführen. Theoretisch erwartete Ergebnisse werden in der Diskussion erläutert.
 
 \section{Diskussion}
 
 \textbf{1. Versuch} \\
-Im ersten Teil des Experimentes wurden die Kriechbewegungen und Meidereaktionen des Regenwurmes beobachtet. Dass unser Versuchstier keine eindeutigen Meidereaktionen zeigte, könnte unter Anderem daran liegen, dass der Wurm an diesem Tag eventuell schon in mehreren Versuchen verwendet wurde. \\
-Bei Reizung des Wurmes am anterioren bzw. posterioren Ende des Wurmes hätte man ein Ausweichen des Wurmes in Form von Zusammenziehen des entsprechenden Ende des Körpers erwartet (wie in der Einleitung \ref{anatomie} erklärt). \\
+Im ersten Teil des Experimentes wurden die Kriechbewegungen und Meidereaktionen des Regenwurmes beobachtet. 
+Das Fehlen eindeutiger Meidereaktionen könnte daran liegen, dass der Wurm in der früheren Gruppe schon in mehreren Versuchen verwendet wurde. \\
+Erwartete Meidereaktionen waren das Zusammenziehen des entsprechenden Körperendes (siehe Abschnitt \ref{anatomie}). \\
 
 \textbf{2. Versuch}\\
 Die Aufzeichnungen der differentiellen Ableitung während anteriorer und posteriorer Reizung des Wurmes zeigen die Aktivierung der MRF bzw. LRF dabei. \\
 Da wir eine differentielle Ableitung durchgeführt haben, sehen wir immer die Differenz der Spannungen zwischen den Elektroden. Diese Differenz lässt uns Rückschlüsse auf die Richtung des Aktionspotentials und damit auf die aktivierte Riesenfaser (MRF oder LRF) zu. \\
-Wie in \ref{differentiell} erläutert, lässt sich die Gesamtspannung bei der differentiellen Ableitung aus $U_{ges} \approx U_1 - U_2$ berechnen. \\
-In Abbildung \ref{diff} ist skizzenhaft die Ausbreitung eines Aktionspotenzials in Form der Ringe a) - c) gezeigt und die Messelektroden an den Stellen $1$ und $2$. Beispielhaft wird im Folgenden berechnet, welche Spannungsunterschiede man zwischen $1$ und $2$ messen würde, wenn sich das Aktionspotenzial jeweils an den Punkten a) - c) befindet: 
-\begin{align*}
-a)\,\, U_{ges} &= -60\mu V - 0\mu V =  -60\mu V\\
-b)\,\, U_{ges} &= 0\mu V - 0\mu V =  0\mu V\\
-c)\,\, U_{ges} &= 0\mu V - -60\mu V =  60\mu V\\
-\end{align*}
-Das Elektromyogramm würde entsprechend die Form des Graphen in Abbildung \ref{diff} annehmen. Ein Aktionspotenzial ist also "{}doppelt"{} zu sehen. 
-\begin{figure}[H]
-\makebox[\textwidth][c]{\includegraphics[width=0.9\textwidth]{diff.png}}
-\caption{Skizze Elektroden und Ausbreitung des Aktionspotenzials}
-\label{diff}
-\end{figure}
-
+Wie in Abschnitt \ref{differentiell} erläutert, lässt sich die Gesamtspannung bei der differentiellen Ableitung aus $U_{ges} \approx U_1 - U_2$ berechnen. \\
 
 In Abbildung \ref{ant} ist zu sehen, dass die MRF aktiv ist wenn der Wurm am anterioren Ende gereizt wurde. Die Kurve schlägt erst nach oben aus, dann nach unten. D.h. die Spannung wird erst positiver wenn das Aktionspotential an der zweiten Elektrode vorbeiläuft, geht zurück auf $0V$, wenn das Aktionspotential in der Mitte der Elektroden angekommen ist und zeigt dann eine negative Spannung, wenn das Aktionspotential an der ersten Elektrode angekommen ist. \\
 Entsprechend zeigt Abbildung \ref{post} eine Umkehrung dieser Ausschläge. Da die Reizung am posterioren Ende die LRF aktiviert, zeigt sich zuerst eine negative Spannung und danach eine positive Spannung. D.h. das Aktionspotential läuft hier genau in die andere Richtung als bei der Reizung am anterioren Ende. \\
-Die Unterschiede in der Dauer der Aktionspotentiale (anterior durchschnittlich:$0.7457ms$, posterior durchschnittlich: $1,208ms$) könnte man darauf zurückschließen, dass es sich bei den lateralen Riesenfasern um zwei \glqq synchronisierte\grqq{} Neurone handelt. Bei Aktivierung der LRF war die Dauer größer als bei der MRF. Da wir eine extrazelluläre Messung durchgeführt haben, kann es sein, dass es durch die Summierung der Aktionspotentiale aus den beiden LRF zur Beobachtung längerer Aktionspotentiale kam. \\
+Die Unterschiede in der Dauer der Aktionspotentiale (anterior durchschnittlich: $0.7457ms$, posterior durchschnittlich: $1,208ms$) könnten darauf hindeuten, dass es sich bei den lateralen Riesenfasern um zwei \glqq synchronisierte\grqq{} Neurone handelt. Bei Aktivierung der LRF war die Dauer größer als bei der MRF. Da wir eine extrazelluläre Messung durchgeführt haben, kann es sein, dass es durch die Summierung der Aktionspotentiale aus den beiden LRF zur Beobachtung längerer Aktionspotentiale kam. \\
 Die Amplituden der Aktionspotentiale zeigten keine großen Differenzen (Unterschied Durchschnitt: $0,002mV$) zwischen anteriorer und posteriorer Reizung. Bei der anterioren Reizung wird zwar nur die Aktivität einer einzigen Riesenfaser gemessen (MRF), diese hat aber einen größeren Durchmesser als die beiden LRF, dessen Aktivität bei der posterioren Reizung aufgezeichnet wird. Bei den lateralen Riesenfasern kommt es zur Summation (extrazelluläre Messung), sodass wir ähnliche Amplituden beobachtet haben. \\
 Bezüglich der Latenzzeit würde man erwarten, dass diese bei der anterioren Reizung, d.h. bei Aktivierung der MRF geringer sein würde, da die MRF einen größeren Durchmesser hat als die LRF, sodass der Längswiderstand kleiner ist. \\
 
-$\rightarrow$ 520 Wörter, maximal 800 ? 
+%$\rightarrow$ 520 Wörter, maximal 800 ? 
 
 \textbf{3. Versuch}\\
-
+Die gemessenen Werte in Tabelle \ref{werte2} zeigen die Amplitude (mV), Dauer und Latenzzeit (jeweils in s.) von Aktionspotentialen des Wurms bei elektrischen Reizen mit 3,5V Stärke.\\
+Da unsere Messungen viele Artefakte enthielten, fiel es uns schwer Aktionspotentiale vernünftig erkennen und auswerten zu können. Die Anzahl und schwere der Artefakte liegt zum Einen an der Art der Ableitung, da extrazelluläre Ableitungen anfälliger für Störungen sind als intrazelluläre. Zusätzlich sondern Regenwürmer in bedrohlichen Situationen Schleim ab, der wenn er die Elektroden benetzt, eine klare Ableitung fast unmöglich macht. Versuche die Störungen zu minimieren waren erfolglos.\\
+Bei den Messwerten (s. Tab. \ref{werte2}) fällt sofort ins Auge, dass die Zahlen stark von den im zweiten Versuch gemessenen Werten (s. Tab. \ref{werte}) abweichen. Während die Amplitude ca. 4,5 mal so hoch ist wie die durchschnittliche Amplitude in Tabelle \ref{werte}, ist die Dauer sogar zwischen 24 und 67 mal so hoch wie die im vorherigen Versuchsteil gemessenen Werte.\\
+Dies könnte daran liegen, dass die von uns als Aktionspotentiale identifizierten Kurven lediglich Störungen waren. 
 
 
 \begin{thebibliography}{999}
