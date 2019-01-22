@@ -8,6 +8,9 @@
 \usepackage{amsmath}
 \usepackage{cite}
 \usepackage{pdfpages}
+\usepackage{caption} 
+\captionsetup[table]{position=above,skip=0.7cm} 
+\usepackage{adjustbox}
 \usepackage[german]{varioref}
 \usepackage{mathpazo} % Palatino font
 \usepackage[german]{babel}
@@ -104,9 +107,39 @@
 %----------------------------------------------------------------------------------------
 \section{Einleitung}
 
+\subsection{Membranpotential von Neuronen}
+Die Fortleitung von Informationen wird von Zellen des Nervensystem übernommen und basiert auf Spannungsunterschieden zwischen dessen Zellinnerem und dem extrazellulären Raum. \\
+Aufgrund der Semipermeabilität der Membran von Neuronen liegt ein sogenanntes Ruhepotential von ca. -70mV vor. Die Membran ist für größere Ionen wie Natrium ($Na^{+}$) nicht permeabel, aber Kalium ($K^{+}$) kann frei diffundieren. Daher entspricht das Ruhemembranpotential in etwa dem Gleichgewichtspotential von Kalium. Durch die geringere Konzentration von Kalium-Ionen außen ergibt sich ein negatives Membranpotential, d.h. die Nervenzelle ist gegenüber der Außenseite negativ geladen. Außerdem trägt eine Natrium-Kalium-Pumpe ($Na^{+}$-$K^+$-ATPase) zum Erhalt des Membranpotentials bei.  
+
+
+\subsection{Nernst-Gleichung}
+Mit Hilfe diese Gleichung lässt sich das Gleichgewichtspotential $E_{ion}$ für Ionen berechnen, d.h. das Membranpotential bei dem sich die Ionenbewegungen im Gleichgewicht befinden. Dieses Potential ist abhängig von der Ionenkonzentration außen $c_a$ und innen $c_i$. Außerdem wird vereinfachend eine Temperatur von 20 Grad angenommen. 
+\begin{equation}
+\label{nernst}
+E_{ion} = 58mV \cdot \log(\dfrac{c_a}{c_i})
+\end{equation}
+
+Um mehrere Ionen für das Membranpotential von Neuronen zu berücksichtigen, benötigt man die komplexere Goldmann-Gleichung. Sie bezieht zusätzlich für jedes Ion die entsprechende Permeabilität der Membran mit ein. 
+
+\subsection{Voltage-Clamp-Methode}
+Um Strom durch Ionenkanäle der Nervenzellmembran zu messen verwendet man die Voltage-Clamp-Technik. Dabei wird eine Elektrode verwendet, die die Spannung an der Membran misst und mit einer Sollspannung vergleicht. Dazu wird noch eine zweite Elektrode benötigt, die entsprechende Abweichungen von der Sollspannung ausgleichen soll. Dieser benötigte Stromfluss entspricht dem Ionenstrom durch die Membran. 
+
+\subsection{Aktionspotentiale}
+Eine Nervenzelle wird durch die Bindung eines Neurotransmitters an einen ligandengesteuerten Ionenkanal in der Plasmamembran aktiviert. Dieser Kanal öffnet sich durch die Bindung, woraufhin $Na^{+}$ entlang des Konzentrationsgradienten in die Zelle einströmt und eine Depolarisation bewirkt. Spannungsabhängige $Na^{+}$-Kanäle entlang des Axons einer Nervenzelle, die durch die Depolarisation in benachbarten Regionen der Zelle kurz geöffnet werden, sorgen für die Ausbreitung des Aktionspotentials in Form einer Depolarisationswelle durch das Neuron. Kurz nach der Depolarisation durch den Natrium-Einstrom öffnen sich auch spannungsgesteuerte $K^+$-Kanäle entlang des Axons, die wiederum eine Repolarisation durch den Ausstrom von Kalium bewirken. Da diese Kalium-Kanäle etwas langsamer schließen, kommt es zu einer Hyperpolarisation der Zelle. Anschließend wird das Ruhepotential durch Leckströme von Ionen und die Aktivität der Natrium-Kalium-Pumpe wiederhergestellt.  
+%\begin{figure}[H]
+%\makebox[\textwidth][c]{\includegraphics[width=0.85\textwidth]{aktionspotential}}
+%\caption{Die Abbildung zeigt den zeitlichen Verlauf eines Aktionspotentials einer Nervenzelle. Zu sehen ist die Depolarisation von -70mV auf ca. +20mV, danach die Repolarisation übergehend zur Hyperpolarisation zu ca. 100mV und die Wiederherstellung des Ruhepotentials.  }
+%\label{ap}
+%\end{figure}
+
+\subsection{Refraktärphase}\label{refraktär}
+Nachdem die Natrium-Kanäle während der Depolarisation kurz geöffnet waren, sind sie für eine bestimmte Zeit inaktiviert. Diese Phase nennt man Refraktärphase. Währenddessen können diese Natrium-Kanäle nicht aktiviert werden und ein weiteres Aktionspotential auslösen. Dadurch wird erreicht, dass sich die Depolarisationswelle, d.h. das Aktionspotential, nur in eine Richtung entlang des Axons ausbreitet.   \\
+Man unterscheidet zwischen der absoluten und relativen Refraktärphase. Während der absoluten Refraktärphase ist eine Erregung überhaupt nicht möglich, auch nicht durch eine starke Depolarisation. \\
+Die relative Refraktärphase beginnt direkt nach der absoluten Refraktärphase. Hier ist eine erneute Erregung zwar möglich, aber das Schwellenpotential ist deutlich höher. Das heißt, um erneut ein Aktionspotential auszulösen ist ein stärkerer Reiz nötig. Außerdem ist während dieser Zeit die Amplitude des resultierenden Aktionspotentials verringert. 
+
 \section{Material und Methoden}
 \subsection{Material}
-Für diesen Versuch benötogten wir lediglich einen Computer mit der Software Neurosim. 
+Für diesen Versuch benötigten wir lediglich einen Computer mit der Software Neurosim. 
 
 \subsection{Versuchsaufbau}
 
@@ -119,7 +152,8 @@ Für diesen Versuch benötogten wir lediglich einen Computer mit der Software Ne
 
 \begin{table}[H]
 \caption{Erhöhen des Stimulus bei 20 Grad C, ausgehend von $40.74\mu A$}
-\begin{center}
+\centering
+\begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
 \begin{tabular}{c|c|c}
 Reizstrom in $\mu A$ & Zeit bis zur maximalen Spannung in ms & maximale Spannung in mV \\
 \hline\hline
@@ -130,9 +164,17 @@ Reizstrom in $\mu A$ & Zeit bis zur maximalen Spannung in ms & maximale Spannung
 80.74 & 0.42 & 28.36\\
 90.74 & 0.4 & 29.45\\
 \end{tabular}
-\end{center}
-\label{werte}
-\end{table}
+\end{adjustbox}
+\end{table} 
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Aufgabe1/plot}}
+\caption{Plot mit Graphen des Membranpotentials und des Gleichgewichtspotentials von Kalium in Abhängigkeit der Kalium-Konzentration außen (log-transformiert)}
+\label{plot}
+\end{figure}
+
+
+
 
 
 \begin{table}[H]
@@ -141,23 +183,56 @@ Reizstrom in $\mu A$ & Zeit bis zur maximalen Spannung in ms & maximale Spannung
 \begin{tabular}{c|c|c}
 Reizstrom in $\mu A$ & AP pro 100ms & Entladungsfrequenz in Hz \\
 \hline\hline
-2	&	1	&	10	\\2,02	&	2	&	20	\\2,06	&	3	&	30	\\2,08	&	4	&	40	\\3	&	5	&	50	\\5,4	&	6	&	60	\\10	&	7	&	70	\\16	&	8	&	80	\\22	&	9	&	90	\\30	&	9	&	90	\\35	&	10	&	100	\\40	&	10	&	100	\\45	&	11	&	110	\\55	&	12	&	120	\\70	&	12	&	120	\\75	&	13	&	130	\\90	&	13	&	130	\\95	&	14	&	140	\\115	&	14	&	140	\\120	&	1	&	10	\\125	&	1	&	10	\\130	&	1	&	10	
+2	&	1	&	10	\\
+2,02	&	2	&	20	\\
+2,06	&	3	&	30	\\
+2,08	&	4	&	40	\\
+3	&	5	&	50	\\
+5,4	&	6	&	60	\\
+10	&	7	&	70	\\
+16	&	8	&	80	\\
+22	&	9	&	90	\\
+30	&	9	&	90	\\
+35	&	10	&	100	\\
+40	&	10	&	100	\\
+45	&	11	&	110	\\
+55	&	12	&	120	\\
+70	&	12	&	120	\\
+75	&	13	&	130	\\
+90	&	13	&	130	\\
+95	&	14	&	140	\\
+115	&	14	&	140	\\
+120	&	1	&	10	\\
+125	&	1	&	10	\\
+130	&	1	&	10	
 \end{tabular}
 \end{center}
 \label{werte}
 \end{table}
 
-\subsection{Modul Hodgkin - Huxley: Volatge Clamp}
+\subsection{Modul Hodgkin - Huxley: Voltage Clamp}
+
 
 \begin{table}[H]
 \caption{Testen verschiedener Klemmspannungen bei $-100$ mV Haltespannung}
-\begin{center}
+\centering
+\begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
 \begin{tabular}{c|c|c}
-Klemmspanung in $-100$ mV & maximaler Stromfluss K$^+$ & maximaler Stromfluss Na$^+$\\
+Klemmspannung in $-100$ mV & maximaler Stromfluss K$^+$ & maximaler Stromfluss Na$^+$\\
 \hline\hline
--50	&	94,41	&	-346,15	\\-40	&	346,15	&	-1069,93	\\-30	&	692,31	&	-1793,71	\\-20	&	1132,87	&	-2230,77	\\-10	&	1604,9	&	-2409,09	\\0	&	2108,39	&	-2318,18	\\10	&	2548,95	&	-2090,91	\\20	&	2989,51	&	-1608,39	\\30	&	3398,6	&	-1013,99	\\40	&	3870,63	&	-363,64	\\50	&	4248,25	&	342,66	
+-50	&	94,41	&	-346,15	\\
+-40	&	346,15	&	-1069,93	\\
+-30	&	692,31	&	-1793,71	\\
+-20	&	1132,87	&	-2230,77	\\
+-10	&	1604,9	&	-2409,09	\\
+0	&	2108,39	&	-2318,18	\\
+10	&	2548,95	&	-2090,91	\\
+20	&	2989,51	&	-1608,39	\\
+30	&	3398,6	&	-1013,99	\\
+40	&	3870,63	&	-363,64	\\
+50	&	4248,25	&	342,66	
 \end{tabular}
-\end{center}
+\end{adjustbox}
 \label{werte}
 \end{table}
 
