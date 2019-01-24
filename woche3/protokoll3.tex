@@ -171,19 +171,19 @@ Wie in Abb. \ref{goldmann-aufbau} zu erkennen handelt es sich um einen simplen V
 
 Zusätzlich konnten Temperatur, Ionenkonzentrationen innerhalb und außerhalb der Zelle, sowie die relative Permeabilität der Zellmembran in Bezug zu der Permeabilität gegenüber K$^+$-Ionen  verändert werden. Für unseren Versuch wählten wir folgende Parameter (s. Abb. \ref{goldmann-aufbau}: Die Temperatur der Lösung wurde auf 20$^\circ$C heraufgesetzt. Die relative Permeabilität für K$^+$-Ionen wurde auf 100 gesetzt, die von Na$^+$-Ionen auf 4 und die der Cl$^-$-Ionen auf 45. Die Konzentration der K$^+$-Ionen innerhalb der Zelle lag bei 400 mM, außerhalb bei 20 mM. Na$^+$-Ionen hatten im Äußeren der Zelle eine Konzentration von 440 mM und im Zellinneren eine von 50 mM, während Cl$^-$-Ionen im Außenmedium eine Konzentration von 560 mM aufwiesen und im Inneren 75 mM.\\
 
-\item \textbf{Modul Hodkin-Huxley (Current-Clamp)}\\
-Auch in diesem Teil des Versuches wird eine Zelle in einem Außenmedium simuliert (s. Abb. \ref{a2_2-1}). Allerdings wird in diesem Aufbau eine Reizelektrode ergänzt, die an eine current clamp angeschlossen ist. 
+\item \textbf{Modul Hodgkin-Huxley (Current-Clamp)}\\
+Auch in diesem Teil des Versuches wird eine Zelle in einem Außenmedium simuliert (s. Abb. \ref{a2_aufbau1}). Allerdings wird in diesem Aufbau eine Reizelektrode ergänzt, die an eine current clamp angeschlossen ist. 
 \begin{figure}[H]
 \makebox[1\textwidth][c]{\includegraphics[width=0.65\textwidth]{Aufgabe2/aufbau1.png}\hfill\includegraphics[width=0.65\textwidth]{Aufgabe2/aufbau1-graph.png}}
 \caption{Die Abbildung zeigt den anfänglichen Versuchsaufbau innerhalb der Simulation Neurosim. Links ist der Versuchsaufbau dargestellt, das Zellinnere in grün mit roter Zellmembran und das Außenmedium in blau. Es gibt zwei Elektroden die ins Zellinneren reichen, eine Messelektrode und eine Reizelektrode, die mit einer current clamp verbunden ist. Rechts zeigen Kurven die Werte der Reizungen, sowie die im Zellinneren gemessen Werte.}
 \label{a2_aufbau1}
 \end{figure}
-Zu Anfangs wählten wir für das Außenmedium hat eine Temperatur von 20$^\circ$ C und weist eine Na$^+$-Konzentration von 418 mM und eine K$^+$-Konzentration von 10 mM auf. Im inneren der Zelle liegen Na$^+$-Ionen mit einer Konzentration von 70 mM und K$^+$-Ionen mit einer Konzentration von 292 mM vor. \\
-Über die Reizelektrode können zwei Reize voreingestellt und mit Start in die Zelle übertragen werden. Mithilfe der Parameter konnten jeweils die Amplitude in $\mu A$ (s. Abb. \ref{a2_aufbau1}: "{} amp"{}), die Dauer (s. Abb. \ref{a2_2-1}: "{} dur"{}) in ms und die Verzögerung (s. Abb. \ref{a2_aufbau1}: "{} delay"{}) in ms eingestellt werden.\\
+Zu Anfang wählten wir für das Außenmedium eine Temperatur von 20$^\circ$ C und eine Na$^+$-Konzentration von 418 mM und eine K$^+$-Konzentration von 10 mM auf. Im Inneren der Zelle liegen Na$^+$-Ionen mit einer Konzentration von 70 mM und K$^+$-Ionen mit einer Konzentration von 292 mM vor. \\
+Über die Reizelektrode können zwei Reize voreingestellt und mit Start in die Zelle übertragen werden. Mithilfe der Parameter konnten jeweils die Amplitude in $\mu A$ (s. Abb. \ref{a2_aufbau1}: "{} amp"{}), die Dauer (s. Abb. \ref{a2_aufbau1}: "{} dur"{}) in ms und die Verzögerung (s. Abb. \ref{a2_aufbau1}: "{} delay"{}) in ms eingestellt werden.\\
 
 Für die zweite Hälfte dieses Versuchsteils wurde die Temperatur auf 6$^\circ$ C heruntergesetzt und die K$^+$-Konzentration innerhalb der Zelle auf 390 mM erhöht. Zusätzlich wurde die Dauer des Reizes auf 90 ms erhöht.
 
-\item \textbf{Modul Hodkin-Huxley (Voltage-Clamp)}\\
+\item \textbf{Modul Hodgkin-Huxley (Voltage-Clamp)}\\
 Für diesen Teil des Versuchs wurde der Aufbau erneut leicht angepasst. Die current clamp wurde durch eine Voltage Clamp ersetzt (s. Abb. \ref{a3_aufbau}).\\
 Für die Voltage Clamp können Halte- und Klemmspannung in mV sowie die Dauer in ms eingestellt werden. Außerdem können zusätzlich die Gifte "{}TTX"{}, "{}TEA"{} und "{}Scorp Tx"{} in das System eingeleitet werden.
 
@@ -207,17 +207,17 @@ Für den letzten Versuchsteil zur Bewegungswahrnehmung wurde in Neurosim eine ne
 Die Konzentration der K$^+$-Ionen im Außenmedium wurde von 10 mM in 50er Schritten auf 800 mM heraufgesetzt. Bei jedem Schritt notierten wir das Gleichgewichtspotential (Eq) von K$^+$ in mV und das Membranpotential (V$_\text{m}$) in mV.
 
 \item \textbf{Modul Hodgkin-Huxley: Current clamp}\\
-Als erstes wurde ausgehend von 50 $\mu$A die Stromamplitude des Reizes reduziert bis auf zwei Nachkommastellen genau gerade kein Aktionspotential mehr ausgelöst wird. Ausgehend von dem ermitteltem Wert wurde nun die Amplitude in 10er Schritten erhöht und die Maximalspannung in mV sowie die Dauer bis zum Erreichen der Maximalspannung in ms notiert.\\
+Als Erstes wurde ausgehend von 50 $\mu$A die Stromamplitude des Reizes reduziert, bis auf zwei Nachkommastellen genau gerade kein Aktionspotential mehr ausgelöst wurde. Ausgehend von dem ermitteltem Wert wurde nun die Amplitude in 10er Schritten erhöht und die Maximalspannung in mV sowie die Dauer bis zum Erreichen der Maximalspannung in ms notiert.\\
 
-Im zweiten Teil (nach Heruntersetzen der Temperatur auf 6$^\circ$ C (s. Abschnitt Versuchsaufbau)) wurde der Reizstrom erst in kleinen (0.2 $\mu$A) und später in größeren (bis 5 $\mu$A) Schritten auf 130 $\mu$A gesteigert. Die Anzahl der auftretenden Aktionspotentiale in 100 ms wurde festgehalten und die daraus die Frequenz pro Sekunde berechnet.
+Im zweiten Teil (nach Heruntersetzen der Temperatur auf 6$^\circ$ C (s. Abschnitt Versuchsaufbau)) wurde der Reizstrom erst in kleinen (0.2 $\mu$A) und später in größeren (bis 5 $\mu$A) Schritten auf 130 $\mu$A gesteigert. Die Anzahl der auftretenden Aktionspotentiale in 100 ms wurde festgehalten und daraus die Frequenz pro Sekunde berechnet.
 
 \item \textbf{Modul Hodgkin-Huxley: Voltage clamp}\\
 Es wurde ein Reiz mit den eingestellten Parametern induziert und der ausgelöste Gesamtstrom im Graphen festgehalten.\\
 Die selektiven Kanalblocker TTX und TEA wurden aktiviert um jeweils entweder den Strom der K$^+$- bzw. Na$^+$-Ionen zu blockieren.\\
-Anschließend wurde von einem Haltepotential von -100 mV ausgehend die Klemmspannungen zwischen -50 mV und +50 mV in 10er Schritten eingestellten und jeweils der maximale Stromfluss der Ionen unter Verwendung der Kanalblocker notiert.
+Anschließend wurde von einem Haltepotential von -100 mV ausgehend die Klemmspannungen zwischen -50 mV und +50 mV in 10er Schritten eingestellt und jeweils der maximale Stromfluss der Ionen unter Verwendung der Kanalblocker notiert.
 
 \item \textbf{Bewegungswahrnehmung} \\
-Für diesen letzten Versuchsteil wurde ein neuronales Netz nach Barlow-Levick konstruiert das Bewegungen von links nach rechts detektieren kann und getestet was passiert wenn sich der Reiz stattdessen von rechts nach links ausbreitet, bzw. die Bewegung von rechts nach links geht.\\
+Für diesen letzten Versuchsteil wurde ein neuronales Netz nach Barlow-Levick konstruiert, das Bewegungen von links nach rechts detektieren kann und getestet was passiert, wenn sich der Reiz stattdessen von rechts nach links ausbreitet, bzw. die Bewegung von rechts nach links geht.\\
 Anschließend wurde dieses Netzwerk zu einem Reichhardt-Detektor erweitert und die Entwicklung von Aktionspotentialen an den verschiedenen Neuronen bei verschiedenen Arten der Reizung beobachtet.
 \end{enumerate}
 
@@ -229,7 +229,7 @@ Anschließend wurde dieses Netzwerk zu einem Reichhardt-Detektor erweitert und d
 \label{plot13}
 \end{figure}
 
-Wie in Abbildung \ref{plot13} zu sehen weichen das Membranpotential und die Gleichgewichtskonstante von Kalium, insbesondere für kleine Kalium stark voneinander ab.
+Wie in Abbildung \ref{plot13} zu sehen weichen das Membranpotential und die Gleichgewichtskonstante von Kalium, insbesondere für kleine Kalium stark voneinander ab. Dies ist darauf zurückzuführen, dass das Membranpotential bei geringen $K^+$-Konzentrationen außerhalb der Zelle stärker von den Konzentrationen anderer Ionen($Na^+$, $Cl^-$) beeinflusst wird. Dies ist bei Betrachtung der Goldmann-Gleichung leicht zu erkennen: Mit kleinerer Kalium-Konzentration ist der Einfluss von Kalium auf das resultierende Membranpotential kleiner. 
 
 \begin{table}[H]
 \caption{Folgende Werte wurden im Skript gegeben:}
@@ -314,7 +314,7 @@ Reizstrom in $\mu A$ & AP pro 100ms & Entladungsfrequenz in Hz \\
 \label{werte224}
 \end{table}
 
-Die in Tabelle \ref{werte224} dargestellten Messwerte zeigen die Anzahl der Aktionspotentiale pro 100ms in Abhängigkeit der Stromstärke des Reizes sowie die daraus resultierende Entladungsfrequenz in Hz. Es ist klar zu erkennen, dass die Anzahl der Aktionspotentiale am Anfang noch auf kleine Veränderungen reagiert, später allerdings nur noch bei großer Steigung des Reizstroms größer wird. Die zunehmende Anzahl der Aktionspotentiale allgemein ist darauf zurückzuführen, dass die Stärke von Reizen nicht über die Amplitude der Aktionspotentiale codiert wird sondern über deren Frequenz. Eine Hohe Frequenz bedeutet demnach ein starker Reiz. Aufgrund der Refraktärzeit existiert allerdings eine obere Grenze der möglichen Anzahl Aktionspotentiale in einem gewissen Zeitraum (hier: 100 ms).  Ist der Reiz zu stark, so ist die Bildung von mehr als einem Aktionspotential nicht mehr möglich, da die absolute Refraktärzeit noch nicht vorbei und somit die Natrium-Kanäle noch inaktiv sind.
+Die in Tabelle \ref{werte224} dargestellten Messwerte zeigen die Anzahl der Aktionspotentiale pro 100ms in Abhängigkeit der Stromstärke des Reizes sowie die daraus resultierende Entladungsfrequenz in Hz. Es ist klar zu erkennen, dass die Anzahl der Aktionspotentiale am Anfang noch auf kleine Veränderungen reagiert, später allerdings nur noch bei großer Steigung des Reizstroms größer wird. Die zunehmende Anzahl der Aktionspotentiale allgemein ist darauf zurückzuführen, dass die Stärke von Reizen nicht über die Amplitude der Aktionspotentiale codiert wird sondern über deren Frequenz. Eine hohe Frequenz bedeutet demnach ein starker Reiz. Aufgrund der Refraktärzeit existiert allerdings eine obere Grenze der möglichen Anzahl Aktionspotentiale in einem gewissen Zeitraum (hier: 100 ms).  Ist der Reiz zu stark, so ist die Bildung von mehr als einem Aktionspotential nicht mehr möglich, da die absolute Refraktärzeit noch nicht vorbei und somit die Natrium-Kanäle noch inaktiv sind.
 
 \subsection{Modul Hodgkin - Huxley: Voltage Clamp}
 
@@ -326,10 +326,10 @@ Wie in Abbildung \ref{graph32} zu erkennen fällt der Gesamtstrom nach Auslösun
 \label{graph32}
 \end{figure}
 
-Aktiviert man die Kanalblocker TTX und TEA und betrachtet die K$^+$- und Na$^+$-Einströme isoliert so zeigt sich schnell, woher der Verlauf der Kurve rührt.  
+Aktiviert man die Kanalblocker TTX und TEA und betrachtet die K$^+$- und Na$^+$-Einströme isoliert, so zeigt sich schnell, woher der Verlauf der Kurve rührt.  
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=0.75\textwidth]{Aufgabe3/3_total_nak}}
-\caption{Die Abbildung zeigt im mittleren Graphen die Stromstärke in $\mu$A in grün ist im Hintergrund der totale Strom zu erkennen, die blaue Kurve zeigt den isolierten Kalium-Strom bei Zugabe von TTX und die pinke Kurve den isolierten Natrium-Strom bei Zugabe von TEA.}
+\caption{Die Abbildung zeigt im mittleren Graphen die Stromstärke in $\mu$A. In grün ist im Hintergrund der totale Strom zu erkennen, die blaue Kurve zeigt den isolierten Kalium-Strom bei Zugabe von TTX und die pinke Kurve den isolierten Natrium-Strom bei Zugabe von TEA.}
 \label{graph_all}
 \end{figure}
 
