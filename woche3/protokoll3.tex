@@ -359,5 +359,28 @@ Klemmspannung in $-100$ mV & maximaler Stromfluss K$^+$ & maximaler Stromfluss N
 \end{table}
 
 \subsection{Bewegungswahrnehmung}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.3\textwidth]{Aufgabe4/barlow-levick}}
+\caption{Das in dieser Abbildung abgebildeten Barlow-Levick-Model eines neuronalen Netzwerks ist in der Lage Bewegungen von Links nach Rechts zu registrieren. Gelbe Kreise stellen Neuronen dar, die hellblauen Rauten simulieren Synapsen.}
+\label{bar-lev}
+\end{figure}
+
+In Abbilung \ref{bar-lev} ist ein neuronales Netzwerk nach dem im Skript beschriebenen Barlow-Lewick Modell zu erkennen. Die Neuronen 1 und 2 sind über erregende Synapsen des Typs a mit Neuron 3 verbunden, welches über eine hemmende Synapse des Typs b mit Neuron 4 verbunden ist. In der Synapse von Neuron 2 zu Neuron 3 ist ein 200 ms Delay eingebaut. Wird eine Bewegung von Links nach Rechts registriert, also wird Neuron 1 vor Neuron 2 gereizt so kommt es zu keiner weiteren AP Bildung an den anderen Neuronen. Findet eine Bewegung in die Gegenrichtung mit einem 200 ms Delay statt, so kommt es an Neuron 3 zu einem Aktionpotential, ausgelöst durch die Summierung der von Neuron 1 und Neuron 2 zeitgleich eintreffenden Aktionspotentiale und an Neuron 4 kommt es zu einer Hemmung (s. Abb. \ref{hemm})
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.75\textwidth]{Aufgabe4/barlow-levick-g}}
+\caption{In der Abbildung sind die Spannungen (in mV) an den verschiedenen Neuronen graphisch dargestellt.}
+\label{hemm}
+\end{figure}
+
+Bei einer Erweiterung zu einem Reichhardt-Detektor (s. Abb. \ref{reich}) wird ein zusätzliches Neuron sowie drei zusätzliche Neuronen benötigt. Erregende Synapsen verschalten mit einem Delay von 200 ms Neuron 1 mit Neuron 3, sowie Neuron 2 mit Neuron 4. Neuron 1 und 4,  2 und 3 sowie 3 und 4 sind ebenfalls mit erregenden verknüpft, allerdings ohne Delay. Neuron 4 ist mit Neuron 5 über eine hemmende Synapse verbunden. Zusätzlich haben wir den Initial threshold des Neurons 5 von -40 mV auf -50 mV herabgesetzt, da es sonst nicht zur Auslösung eines Aktionspotentials an Neuron 5 kam. 
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.4\textwidth]{Aufgabe4/reich}}
+\caption{Ein neuronales Netzwerk entsprechend des Modells eines Reichhardt-Detektors entspricht.}
+\label{reich}
+\end{figure}
+
+Aktionspotentiale an den Interneuronen 3 und 4 entstehen nicht sofort, sondern erst nach Aufsummierung mehrerer ankommenden AP's. Soll bereits beim ersten eintreffenden AP ein weiteres ausgelöst werden, so kann der Threshold heruntergesetzt werden, so dass es bei geringerer Spannung bereits zur Auslösung eines Aktionspotentials kommt. Zusätzlich müssen die beiden Aktionpotentiale der vorherigen Neuronen so gut wie gleichzeitig eintreffen, es gibt lediglich einen Spielraum von -0.004 und +0.0034, der auf den Delay zwischen den Reizen angewendet werden kann.
 
 \end{document}
