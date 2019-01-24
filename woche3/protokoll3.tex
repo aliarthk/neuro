@@ -116,10 +116,15 @@ Aufgrund der Semipermeabilität der Membran von Neuronen liegt ein sogenanntes R
 Mit Hilfe diese Gleichung lässt sich das Gleichgewichtspotential $E_{ion}$ für Ionen berechnen, d.h. das Membranpotential bei dem sich die Ionenbewegungen im Gleichgewicht befinden. Dieses Potential ist abhängig von der Ionenkonzentration außen $c_a$ und innen $c_i$. Außerdem wird vereinfachend eine Temperatur von 20 Grad angenommen. 
 \begin{equation}
 \label{nernst}
-E_{ion} = 58mV \cdot \log(\dfrac{c_a}{c_i})
+E_{ion} = 58mV \cdot \log\bigg(\dfrac{c_a}{c_i}\bigg)
 \end{equation}
 
-Um mehrere Ionen für das Membranpotential von Neuronen zu berücksichtigen, benötigt man die komplexere Goldmann-Gleichung. Sie bezieht zusätzlich für jedes Ion die entsprechende Permeabilität der Membran mit ein. 
+\subsection{Goldmann-Gleichung}
+Um mehrere Ionen für das Membranpotential von Neuronen zu berücksichtigen, benötigt man die komplexere Goldmann-Gleichung. Sie bezieht zusätzlich für jedes Ion die entsprechende Permeabilität der Membran mit ein:
+\begin{equation}
+\label{goldmann}
+V_m = \frac{RT}{F}\cdot \ln\bigg(\frac{p_K[K^+]_o+p_{Na}[Na^+]_o+p_{Cl}[Cl^-]_i}{p_K[K^+]_i+p_{Na}[Na^+]_i+p_{Cl}[Cl^-]_o}\bigg)
+\end{equation}
 
 \subsection{Voltage-Clamp-Methode}
 Um Strom durch Ionenkanäle der Nervenzellmembran zu messen verwendet man die Voltage-Clamp-Technik. Dabei wird eine Elektrode verwendet, die die Spannung an der Membran misst und mit einer Sollspannung vergleicht. Dazu wird noch eine zweite Elektrode benötigt, die entsprechende Abweichungen von der Sollspannung ausgleichen soll. Dieser benötigte Stromfluss entspricht dem Ionenstrom durch die Membran. 
@@ -218,11 +223,46 @@ Anschließend wurde dieses Netzwerk zu einem Reichhardt-Detektor erweitert und d
 
 \section{Ergebnisse}
 \subsection{Modul Goldmann}
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Aufgabe1/plot}}
+\caption{Plot mit Graphen des Membranpotentials und des Gleichgewichtspotentials von Kalium in Abhängigkeit der Kalium-Konzentration außen (log-transformiert)}
+\label{plot13}
+\end{figure}
 
-\subsection{Modul Hodgkin - Huxley: Current Clamp}
+Wie in Abbildung \ref{plot13} zu sehen weichen das Membranpotential und die Gleichgewichtskonstante von Kalium, insbesondere für kleine Kalium stark voneinander ab.
 
 \begin{table}[H]
-\caption{Erhöhen des Stimulus bei 20$^\circ$ C, ausgehend von $40.74\mu A$}
+\caption{Folgende Werte wurden im Skript gegeben:}
+\centering
+\begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
+\begin{tabular}{c|c|c|c}
+Ion & Relative Permeabilität & Intrazelluläre \newline Konzentration & Extrazelluläre \newline Konzentration\\ \hline\hline
+K$^+$ & 1.0 & 124 & 4 \\ 
+Na$^+$ & 0.04 & 50 & 470 \\
+Cl$^-$ & 0.3 & 55 & 580
+\end{tabular}
+\end{adjustbox}
+\label{werte-skript}
+\end{table}
+
+Berechnung der Gleichgewichtspotentiale bei 20$^\circ$ mithilfe der Nernst-Gleichung \ref{nernst}:
+\begin{align}
+E_K &= 58\cdot\log\bigg(\frac{4}{124}\bigg)= -86.499 mV\\
+E_{Na} &= 58\cdot\log\bigg(\frac{470}{50}\bigg)=  56.441 mV\\
+E_{Cl} &= 58\cdot\log\bigg(\frac{580}{55}\bigg)= 59.338 mV
+\end{align}
+
+Berechnung des resultierenden Membranpotentials mithilfe der Goldmann-Gleichung:
+\begin{align}
+V_m&=\frac{8.314\cdot 293.15}{96485.333}\cdot\ln\frac{1\cdot 4+0.04\cdot470+0.3\cdot55}{1\cdot 124+0.04\cdot50+0.3\cdot580}\\
+&= -0.051
+\end{align}
+
+\subsection{Modul Hodgkin - Huxley: Current Clamp}
+Ein Aktionspotential wird erstmals bei einer Stromstärke von 40.74 $\mu$A ausgelöst.
+
+\begin{table}[H]
+\caption{Gemessene Werte bei erhöhen des Stimulus um 10$\mu$A bei 20$^\circ$ C, ausgehend von $40.74\mu A$}
 \centering
 \begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
 \begin{tabular}{c|c|c}
@@ -236,17 +276,10 @@ Reizstrom in $\mu A$ & Zeit bis zur maximalen Spannung in ms & maximale Spannung
 90.74 & 0.4 & 29.45\\
 \end{tabular}
 \end{adjustbox}
+\label{werte223}
 \end{table} 
 
-\begin{figure}[H]
-\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Aufgabe1/plot}}
-\caption{Plot mit Graphen des Membranpotentials und des Gleichgewichtspotentials von Kalium in Abhängigkeit der Kalium-Konzentration außen (log-transformiert)}
-\label{plot}
-\end{figure}
-
-
-
-
+Wie in Tabelle \ref{werte223}  zu erkennen  sinkt die Zeit bis zur maximalen Spannung mit steigender Stromstärke des Reizes. Dies liegt daran, dass ein stärkerer Reiz auf Anhieb mehr spannungsgesteuerte Na$^+$-Kanäle öffnet, wodurch mehr Na$^+$-Ionen in die Zelle einströmen und wiederum schneller weitere Na$^+$-Kanäle öffnen. 
 
 \begin{table}[H]
 \caption{Steigern des Reizstroms auf $130 \mu A$}
@@ -273,19 +306,37 @@ Reizstrom in $\mu A$ & AP pro 100ms & Entladungsfrequenz in Hz \\
 90	&	13	&	130	\\
 95	&	14	&	140	\\
 115	&	14	&	140	\\
-120	&	1	&	10	\\
-125	&	1	&	10	\\
+120	&	14	&	140	\\
+125	&	14	&	140	\\
 130	&	1	&	10	
 \end{tabular}
 \end{center}
-\label{werte}
+\label{werte224}
 \end{table}
+
+Die in Tabelle \ref{werte224} dargestellten Messwerte zeigen die Anzahl der Aktionspotentiale pro 100ms in Abhängigkeit der Stromstärke des Reizes sowie die daraus resultierende Entladungsfrequenz in Hz. Es ist klar zu erkennen, dass die Anzahl der Aktionspotentiale am Anfang noch auf kleine Veränderungen reagiert, später allerdings nur noch bei großer Steigung des Reizstroms größer wird. Die zunehmende Anzahl der Aktionspotentiale allgemein ist darauf zurückzuführen, dass die Stärke von Reizen nicht über die Amplitude der Aktionspotentiale codiert wird sondern über deren Frequenz. Eine Hohe Frequenz bedeutet demnach ein starker Reiz. Aufgrund der Refraktärzeit existiert allerdings eine obere Grenze der möglichen Anzahl Aktionspotentiale in einem gewissen Zeitraum (hier: 100 ms).  Ist der Reiz zu stark, so ist die Bildung von mehr als einem Aktionspotential nicht mehr möglich, da die absolute Refraktärzeit noch nicht vorbei und somit die Natrium-Kanäle noch inaktiv sind.
 
 \subsection{Modul Hodgkin - Huxley: Voltage Clamp}
 
+Wie in Abbildung \ref{graph32} zu erkennen fällt der Gesamtstrom nach Auslösung des Reizes kurz ab, bevor die Kurve dann klar  ansteigt und sich einem Grenzwert annähert. 
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.75\textwidth]{Aufgabe3/2}}
+\caption{In dieser Abbildung sieht man den ausgelösten Gesamtstrom (grüne Kurve) in $\mu$A bei -70 mV Halte- und 30 mV Klemmspannung. Der Gesamtstrom erreicht ein Maximum von 3461.54 $\mu$A}
+\label{graph32}
+\end{figure}
+
+Aktiviert man die Kanalblocker TTX und TEA und betrachtet die K$^+$- und Na$^+$-Einströme isoliert so zeigt sich schnell, woher der Verlauf der Kurve rührt.  
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.75\textwidth]{Aufgabe3/3_total_nak}}
+\caption{Die Abbildung zeigt im mittleren Graphen die Stromstärke in $\mu$A in grün ist im Hintergrund der totale Strom zu erkennen, die blaue Kurve zeigt den isolierten Kalium-Strom bei Zugabe von TTX und die pinke Kurve den isolierten Natrium-Strom bei Zugabe von TEA.}
+\label{graph_all}
+\end{figure}
+
+In der Abbildung \ref{graph_all} ist zu erkennen, dass der anfängliche Abfall der Kurve des totalen Stroms von den einströmenden Na$^+$-Ionen ins Zellinnere stammt. Dieses wird so kurzzeitig positiv, somit muss der ausgleichende Strom negativ sein. Der anschließende Anstieg stammt von den ausströmenden Kalium-Ionen.
 
 \begin{table}[H]
-\caption{Testen verschiedener Klemmspannungen bei $-100$ mV Haltespannung}
+\caption{Messwerte verschiedener Klemmspannungen bei $-100$ mV Haltespannung}
 \centering
 \begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
 \begin{tabular}{c|c|c}
@@ -304,9 +355,8 @@ Klemmspannung in $-100$ mV & maximaler Stromfluss K$^+$ & maximaler Stromfluss N
 50	&	4248,25	&	342,66	
 \end{tabular}
 \end{adjustbox}
-\label{werte}
+\label{werte32}
 \end{table}
-
 
 \subsection{Bewegungswahrnehmung}
 
