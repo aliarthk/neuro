@@ -155,8 +155,66 @@ Das \textbf{Reichhardt-Hassenstein Modell} besteht quasi aus zwei gespiegelten H
 Für diesen Versuch benötigten wir lediglich einen Computer mit der Software Neurosim. 
 
 \subsection{Versuchsaufbau}
+\begin{enumerate}
+\item \textbf{Modul Goldmann} \\
+Wie in Abb. \ref{goldmann-aufbau} zu erkennen handelt es sich um einen simplen Versuchsaufbau. Von der gegeben Skala können das Membranpotential, sowie die Gleichgewichtspotentiale der K$^+$-, Na$^+$- und Cl$^-$-Ionen in mV abgelesen werden. 
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Aufgabe1/aufbau1.png}}
+\caption{Die Abbildung zeigt den Versuchsaufbau innerhalb der Simulation Neurosim. Der grüne Kreis stellt eine Zelle dar, die sich in einem Außenmedium, der blauen Umgebung befindet. Der Pfeil steht für eine Elektrode, die neben der Gleichgewichtspotentiale der Ionen auch das Membranpotential misst.}
+\label{goldmann-aufbau}
+\end{figure}
+
+Zusätzlich konnten Temperatur, Ionenkonzentrationen innerhalb und außerhalb der Zelle, sowie die relative Permeabilität der Zellmembran in Bezug zu der Permeabilität gegenüber K$^+$-Ionen  verändert werden. Für unseren Versuch wählten wir folgende Parameter (s. Abb. \ref{goldmann-aufbau}: Die Temperatur der Lösung wurde auf 20$^\circ$C heraufgesetzt. Die relative Permeabilität für K$^+$-Ionen wurde auf 100 gesetzt, die von Na$^+$-Ionen auf 4 und die der Cl$^-$-Ionen auf 45. Die Konzentration der K$^+$-Ionen innerhalb der Zelle lag bei 400 mM, außerhalb bei 20 mM. Na$^+$-Ionen hatten im Äußeren der Zelle eine Konzentration von 440 mM und im Zellinneren eine von 50 mM, während Cl$^-$-Ionen im Außenmedium eine Konzentration von 560 mM aufwiesen und im Inneren 75 mM.\\
+
+\item \textbf{Modul Hodkin-Huxley (Current-Clamp)}\\
+Auch in diesem Teil des Versuches wird eine Zelle in einem Außenmedium simuliert (s. Abb. \ref{a2_2-1}). Allerdings wird in diesem Aufbau eine Reizelektrode ergänzt, die an eine current clamp angeschlossen ist. 
+\begin{figure}[H]
+\makebox[1\textwidth][c]{\includegraphics[width=0.65\textwidth]{Aufgabe2/aufbau1.png}\hfill\includegraphics[width=0.65\textwidth]{Aufgabe2/aufbau1-graph.png}}
+\caption{Die Abbildung zeigt den anfänglichen Versuchsaufbau innerhalb der Simulation Neurosim. Links ist der Versuchsaufbau dargestellt, das Zellinnere in grün mit roter Zellmembran und das Außenmedium in blau. Es gibt zwei Elektroden die ins Zellinneren reichen, eine Messelektrode und eine Reizelektrode, die mit einer current clamp verbunden ist. Rechts zeigen Kurven die Werte der Reizungen, sowie die im Zellinneren gemessen Werte.}
+\label{a2_aufbau1}
+\end{figure}
+Zu Anfangs wählten wir für das Außenmedium hat eine Temperatur von 20$^\circ$ C und weist eine Na$^+$-Konzentration von 418 mM und eine K$^+$-Konzentration von 10 mM auf. Im inneren der Zelle liegen Na$^+$-Ionen mit einer Konzentration von 70 mM und K$^+$-Ionen mit einer Konzentration von 292 mM vor. \\
+Über die Reizelektrode können zwei Reize voreingestellt und mit Start in die Zelle übertragen werden. Mithilfe der Parameter konnten jeweils die Amplitude in $\mu A$ (s. Abb. \ref{a2_aufbau1}: "{} amp"{}), die Dauer (s. Abb. \ref{a2_2-1}: "{} dur"{}) in ms und die Verzögerung (s. Abb. \ref{a2_aufbau1}: "{} delay"{}) in ms eingestellt werden.\\
+
+Für die zweite Hälfte dieses Versuchsteils wurde die Temperatur auf 6$^\circ$ C heruntergesetzt und die K$^+$-Konzentration innerhalb der Zelle auf 390 mM erhöht. Zusätzlich wurde die Dauer des Reizes auf 90 ms erhöht.
+
+\item \textbf{Modul Hodkin-Huxley (Voltage-Clamp)}\\
+Für diesen Teil des Versuchs wurde der Aufbau erneut leicht angepasst. Die current clamp wurde durch eine Voltage Clamp ersetzt (s. Abb. \ref{a3_aufbau}).\\
+Für die Voltage Clamp können Halte- und Klemmspannung in mV sowie die Dauer in ms eingestellt werden. Außerdem können zusätzlich die Gifte "{}TTX"{}, "{}TEA"{} und "{}Scorp Tx"{} in das System eingeleitet werden.
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{\includegraphics[width=0.65\textwidth]{Aufgabe3/aufbau.png}\hfill\includegraphics[width=0.65\textwidth]{Aufgabe3/aufbau-graph.png}}
+\caption{Die Abbildung zeigt den Versuchsaufbau für den dritten Versuchsteil mit der Voltage Clamp. Rechts der Versuchaufbau mit Voltage Clamp. Links die dazugehörigen Werte als Graphen.}
+\label{a3_aufbau}
+\end{figure}
+Diesmal wurde für das Außenmedium eine Temperatur von 6$^\circ$ eingestellt. Die Ionenkonzentrationen innerhalb der Zelle betrugen 302 mM für K$^+$ und 64 mM für Na$^+$. Außerhalb der Zelle waren die K$^+$-Konzentration auf 10 mM und die Na$^+$-Konzentration auf 418 mM eingestellt.\\
+An der Haltespannung der Voltage Clamp wurde auf -70 mV gestellt, die Klemmspannung auf +30mV.\\
+
+Die Graphen (s. Abb. \ref{a3_aufbau} links) zeigten die Spannung in mV und die Stromstärke in $\mu$A.
+
+\item \textbf{Bewegungswahrnehmung} \\
+Für den letzten Versuchsteil zur Bewegungswahrnehmung wurde in Neurosim eine neue Oberfläche geladen in der Neuronen und Synapsen zu neuralen Netzwerken verknüpft werden konnten.
+\end{enumerate}
 
 \subsection{Versuchsdurchführung}
+\begin{enumerate}
+\item \textbf{Modul Goldmann} \\
+Die Konzentration der K$^+$-Ionen im Außenmedium wurde von 10 mM in 50er Schritten auf 800 mM heraufgesetzt. Bei jedem Schritt notierten wir das Gleichgewichtspotential (Eq) von K$^+$ in mV und das Membranpotential (V$_\text{m}$) in mV.
+
+\item \textbf{Modul Hodgkin-Huxley: Current clamp}\\
+Als erstes wurde ausgehend von 50 $\mu$A die Stromamplitude des Reizes reduziert bis auf zwei Nachkommastellen genau gerade kein Aktionspotential mehr ausgelöst wird. Ausgehend von dem ermitteltem Wert wurde nun die Amplitude in 10er Schritten erhöht und die Maximalspannung in mV sowie die Dauer bis zum Erreichen der Maximalspannung in ms notiert.\\
+
+Im zweiten Teil (nach Heruntersetzen der Temperatur auf 6$^\circ$ C (s. Abschnitt Versuchsaufbau)) wurde der Reizstrom erst in kleinen (0.2 $\mu$A) und später in größeren (bis 5 $\mu$A) Schritten auf 130 $\mu$A gesteigert. Die Anzahl der auftretenden Aktionspotentiale in 100 ms wurde festgehalten und die daraus die Frequenz pro Sekunde berechnet.
+
+\item \textbf{Modul Hodgkin-Huxley: Voltage clamp}\\
+Es wurde ein Reiz mit den eingestellten Parametern induziert und der ausgelöste Gesamtstrom im Graphen festgehalten.\\
+Die selektiven Kanalblocker TTX und TEA wurden aktiviert um jeweils entweder den Strom der K$^+$- bzw. Na$^+$-Ionen zu blockieren.\\
+Anschließend wurde von einem Haltepotential von -100 mV ausgehend die Klemmspannungen zwischen -50 mV und +50 mV in 10er Schritten eingestellten und jeweils der maximale Stromfluss der Ionen unter Verwendung der Kanalblocker notiert.
+
+\item \textbf{Bewegungswahrnehmung} \\
+Für diesen letzten Versuchsteil wurde ein neuronales Netz nach Barlow-Levick konstruiert das Bewegungen von links nach rechts detektieren kann und getestet was passiert wenn sich der Reiz stattdessen von rechts nach links ausbreitet, bzw. die Bewegung von rechts nach links geht.\\
+Anschließend wurde dieses Netzwerk zu einem Reichhardt-Detektor erweitert und die Entwicklung von Aktionspotentialen an den verschiedenen Neuronen bei verschiedenen Arten der Reizung beobachtet.
+\end{enumerate}
 
 \section{Ergebnisse}
 \subsection{Modul Goldmann}
@@ -164,7 +222,7 @@ Für diesen Versuch benötigten wir lediglich einen Computer mit der Software Ne
 \subsection{Modul Hodgkin - Huxley: Current Clamp}
 
 \begin{table}[H]
-\caption{Erhöhen des Stimulus bei 20 Grad C, ausgehend von $40.74\mu A$}
+\caption{Erhöhen des Stimulus bei 20$^\circ$ C, ausgehend von $40.74\mu A$}
 \centering
 \begin{adjustbox}{width=1.3\textwidth, center=\textwidth}
 \begin{tabular}{c|c|c}
