@@ -46,7 +46,7 @@
 	{\huge Psychophysische Experimente zum \\[0.2cm]Farbensehen}\\[0.3cm] % Title of your document
 	
 	\HRule\\[0.75cm]
-	\textsc{\Large\bfseries Gruppe V}
+	\textsc{\Large\bfseries Gruppe \RM{4}}
 	\\[0.8cm]
 	
 \vfill
@@ -116,7 +116,7 @@
 %----------------------------------------------------------------------------------------
 \newgeometry{top=2.5cm,bottom=2.5cm,right=4cm,left=4cm}
 \section{Einleitung}
-\subsection{Physiologie des Farbensehens}
+
 Die Wahrnehmung von Farben im Gehirn kann auf zwei verschiedene Arten ausgelöst werden, einmal durch die Reflektion und selektive Absorption des Sonnenlichts von Gegenständen  oder aber durch die direkte Emission von "{}farbigem"{} Licht. \\
 Im menschlichen Auge werden die auf diese Art entstandenen Reize von drei verschiedenen Rezeptoren in Rezeptorpotentiale umgesetzt. Menschen gehören somit zu den Trichromaten. Bei den drei Rezeptoren handelt es sich um: 
 \begin{enumerate}
@@ -124,7 +124,7 @@ Im menschlichen Auge werden die auf diese Art entstandenen Reize von drei versch
 \item M-Rezeptoren für mittelwelliges Licht, das als grün wahrgenommen wird
 \item L-Rezeptoren für langwelliges Licht, das als rot wahrgenommen wird
 \end{enumerate}
-Da es physikalisch gesehen keine Farben gibt können die Rezeptoren lediglich die Wellenlänge wahrnehmen, die sich daraus ergebenden Farben entstehen erst durch ein kompliziertes neuronales Netzwerk in der Retina. 
+Da es physikalisch gesehen keine Farben gibt, können die Rezeptoren lediglich die Wellenlänge wahrnehmen. Die sich daraus ergebenden Farben entstehen erst durch ein kompliziertes neuronales Netzwerk in der Retina. 
 
 \section{Material und Methoden}
 \subsection{Material}
@@ -151,7 +151,7 @@ Zuletzt wurde eine Farbreihe mit systematisch variierter Helligkeit, aber konsta
 \item \textbf{Farbmischung \RM{2}} \\
 In diesem Teil wurde das Programm \textit{ipxl.bat} mit dem Experiment \textit{Matching and spatial mixture} verwendet. \\
 Hier wurden zwei Farbquadrate angezeigt. Die Farbe des linken Fenster konnte mit einer Farbe bestimmt werden, das rechte Fenster dagegen enthielt feine Linien aus zwei verschiedenen Farbtönen. \\
-Im Versuch sollte eine Farbe links festgelegt werden, die dann auf der rechten Seite durch das Farbpaar möglichst gut nachzumischen. \\
+Im Versuch sollte eine Farbe links festgelegt werden, die dann auf der rechten Seite durch das Farbpaar möglichst gut nachgemischt werden sollte. \\
 Nachdem ein Farbpaar gefunden wurde, sollte für die gleiche Grundfarbe auf der linken Seite ein weiteres Farbpaar bestimmt werden, mit dem diese Farbe nachgemischt werden kann. 
 
 \item \textbf{Simultaner Farbkontrast } \\
@@ -171,9 +171,11 @@ Danach wurden doch die Module \textit{Induction}, \textit{Desaturation by Adapta
 \subsection{Fragen im Skript}
 \begin{enumerate}
 \item \textbf{Der Spektralfarbenzug ist konvex gekrümmt. Warum ist das so?}\\
-Die konvexe Krümmung in allen Ebenen, kommt daher, dass die Rezeptoren in den Bereichen noch angeregt sind.
+Die konvexe Krümmung in allen Ebenen kommt daher, dass die Rezeptoren in den Bereichen noch angeregt sind.
 
-\item \textbf{Warum liegen die Farborte von spektral breitbandigen Lichtern stets innerhalb des Spektralfarbenzuges? Warum lässt sich aus solchen breitbandigen Lichtern nicht jede Farbe mischen (welche nicht)?}
+\item \textbf{Warum liegen die Farborte von spektral breitbandigen Lichtern stets innerhalb des Spektralfarbenzuges? Warum lässt sich aus solchen breitbandigen Lichtern nicht jede Farbe mischen (welche nicht)?} \\
+Der Spektralfarbenzug enthält alle Farben, die durch monochromatisches Licht aus dem sichtbaren Spektrum erzeugt werden können. Demnach liegen alle Farborte von breitbandigem Licht, d.h. Lichter im sichtbaren Bereich innerhalb dieses Spektralfarbenzugs.  \\
+Aus breitbandigem Licht lässt sich kein Ultraviolettes Licht erzeugen, dies benötigt eine niedrige Frequenz der Wellenlänge. 
 
 
 \end{enumerate}
@@ -270,7 +272,7 @@ Schwarz wurde durch die Einstellung auf $0\%$ aller RGB-Werte beobachtet. \\
 \end{minipage}  }
 Die verwendete Farbmischung ist hier die additive Farbmischung, da mehrere Lichtstimuli überlagert werden. \\
 
-Dass das mittlere Grau mit einer Einstellung von allen RGB-Werten auf $50\%$ erreicht wurde (\ref{graumix}), ist auf die Normierung der RGB-Werte zurückzuführen. Die Gesamtleuchtdichte für Weiß ergibt sich aus der Überlagerung der Farben Rot, Grün und Blau auf jeweils $100\%$. Außerdem halbiert sich der Helligkeitseindruck jeder Farbe bei Halbierung der der RGB-Werte, sodass man mit der mittleren Einstellung einen mittleren Grauton erhält. 
+Dass das mittlere Grau mit einer Einstellung von allen RGB-Werten auf $50\%$ erreicht wurde (\ref{graumix}), ist auf die Normierung der RGB-Werte zurückzuführen. Die Gesamtleuchtdichte für Weiß ergibt sich aus der Überlagerung der Farben Rot, Grün und Blau auf jeweils $100\%$. Außerdem halbiert sich der Helligkeitseindruck jeder Farbe bei Halbierung der RGB-Werte, sodass man mit der mittleren Einstellung einen mittleren Grauton erhält. 
 
 
 \subsection{Farbintentität}
@@ -283,7 +285,7 @@ Der Weißpunkt hat im Yxy-Raum die Koordinaten $(100,0.307,0.347)$ und im L*a*b*
 \label{weisspunkt}
 \end{figure}
 
-Mit einer Intensität von $6.3$ (siehe \ref{blau1}) ließ sich das Farbdreieck gut im Koordinatensystem erkennen. Das Farbdreieck ist ein Ebenenschnitt aus dem dreidimensionalen Farbenraum, das man durch eine Normierung der Achsen erhält. Hier erfolgt die Normierung für Weiß, sodass sich der Weißpunkt durch eine Veränderung der Intensität nicht verändert. Es repräsentiert das sichtbaren Spektrums, d.h. alle Farben der Punkte die im Koordinatensystem (siehe \ref{blau1}) innerhalb des Dreiecks liegen, sind für uns sichtbar. Alle weiteren Punkte, die sich außerhalb des Dreiecks befinden repräsentieren Farben die wir nicht sehen können. 
+Mit einer Intensität von $6.3$ (siehe \ref{blau1}) ließ sich das Farbdreieck gut im Koordinatensystem erkennen. Das Farbdreieck ist ein Ebenenschnitt aus dem dreidimensionalen Farbenraum, das man durch eine Normierung der Achsen erhält. Hier erfolgt die Normierung für Weiß, sodass sich der Weißpunkt durch eine Veränderung der Intensität nicht verändert. Es repräsentiert das sichtbare Spektrums, d.h. alle Farben der Punkte die im Koordinatensystem (siehe \ref{blau1}) innerhalb des Dreiecks liegen, sind für uns sichtbar. Alle weiteren Punkte, die sich außerhalb des Dreiecks befinden repräsentieren Farben, die wir nicht sehen können. 
 
 \begin{figure}[H]
 \makebox[\textwidth][c]{\includegraphics[width=1.3\textwidth]{a4/blau1}}
@@ -311,7 +313,7 @@ Für die Verringerung der Helligkeit wurde der Regler für die Intensität auf v
 \caption{Hier ist die weitere Verringerung der Helligkeit des Farbstimulus zu sehen. }
 \label{blau3}
 \end{figure}
-\end{minipage}}
+\end{minipage}} \\
 
 Für die Veränderung des Farbtons wurde der Punkt entlang der Seiten des Dreiecks ein Stück verschoben. Ursprünglich lag der Punkt in der unteren Ecke für Blau im Farbdreieck (siehe \ref{blau1}).
 
@@ -399,9 +401,6 @@ Im Folgenden wurde die Hintergrundfarbe des Stimulus variiert.
 
 Im Folgenden wurde die Größe des Farbstimulus verkleinert und erneut die Hintergrundfarbe variiert. \\
 
-Es ist zu beobachten, dass der Farbstimulus generell mit einem schwarzen Hintergrund intensiver wird. \\
-Außerdem ist bei Betrachtung der Abbildungen mit dem kleineren Farbstimulus zu sehen, dass sich die subjektive Intensität durch die Verkleinerung des Stimulus verringert. 
-
 \makebox[\textwidth][c]{
 \begin{minipage}[t]{0.6\textwidth} 
 \vspace{0pt}
@@ -428,7 +427,10 @@ Außerdem ist bei Betrachtung der Abbildungen mit dem kleineren Farbstimulus zu 
 \caption{Hier ist der kleinere Farbstimulus mit einem weißen Hintergrund gezeigt.}
 \label{hintergrund6}
 \end{figure}
-\end{minipage}}
+\end{minipage}}\\
+
+Es ist zu beobachten, dass der Farbstimulus generell mit einem schwarzen Hintergrund intensiver wird. \\
+Außerdem ist bei Betrachtung der Abbildungen mit dem kleineren Farbstimulus zu sehen, dass sich die subjektive Intensität durch die Verkleinerung des Stimulus verringert. 
 
 
 \subsection{Farbenreihe}
@@ -440,7 +442,7 @@ Um die Farbreihe zu erhalten, in der nur der Farbton geändert werden soll, aber
 \end{figure}
 
 
-Die Farbreihe mit Variabilität der Helligkeit bei Konstanz der anderen Werte wurden einfach durch die Änderung der Y Koordinate (Intensität) erzeugt. Angefangen bei einem Wert von $80$ links haben wir die Helligkeit sukzessive um $10$ verringert nach rechts (bezogen auf die obere Reihe).  (siehe Abbildung \ref{helligkeit_reihe})
+Die Farbreihe mit Variabilität der Helligkeit bei Konstanz der anderen Werte wurde einfach durch die Änderung der Y Koordinate (Intensität) erzeugt. Angefangen bei einem Wert von $80$ links haben wir die Helligkeit sukzessive um $10$ verringert nach rechts (bezogen auf die obere Reihe).  (siehe Abbildung \ref{helligkeit_reihe})
 \begin{figure}[H]
 \makebox[1\textwidth][c]{\includegraphics[width=1.3\textwidth]{a5/helligkeit2}}
 \caption{Hier ist die Farbreihe mit Änderung der Helligkeit zu sehen (Sättigung und Farbton konstant).}
@@ -455,7 +457,7 @@ Die letzte Farbreihe mit Änderungen der Sättigung bei gleichbleibendem Farbton
 \end{figure}
 
 \subsection{Farbmischung \rom{2}}
-Für die linke Fläche haben die Farbe mit dem Yxy-Koordinaten $(20,0.3,0.3)$ gewählt. \\
+Für die linke Fläche haben wir die Farbe mit dem Yxy-Koordinaten $(20,0.3,0.3)$ gewählt. \\
 Um im rechten Fenster einen möglichst ähnlichen Farbton nachzumischen haben wir die Farben mit den Koordinaten $(20,0.258, 0.511)$ (grünlich) und $(20,0.325, 0.191)$ (pink) gewählt. 
 
 
